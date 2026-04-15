@@ -179,7 +179,7 @@ body{
 .hero{
   position:relative;
   min-height:100vh;
-  background:url("img/imagen2.jpg") center/cover no-repeat;
+  background:url("img/img1.jpeg") center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -443,7 +443,7 @@ body{
   display:flex;
   justify-content:center;
   align-items:flex-end;
-  min-height:520px;
+  min-height:100vh;
 }
 
 .franja-mapa{
@@ -499,7 +499,7 @@ body{
 
 .subhero{
   position:relative;
-  height:420px;
+  height:100vh;
   background-size:cover;
   background-position:center;
   display:flex;
@@ -845,7 +845,7 @@ body{
   }
 
   .hero{
-    min-height:84vh;
+    min-height:100vh;
   }
 
   .subhero{
@@ -990,4 +990,36 @@ body{
   background:#ffffff;
   padding:12px;
   box-shadow:0 20px 50px rgba(0,0,0,0.45);
+}
+
+.hero-title-especial{
+  font-size: clamp(3rem, 2.4vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.03;
+  letter-spacing:1.5px;
+  max-width: 3000px;
+  margin: 0 auto 18px;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.hero-content p{
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  color: #d6dbe1;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px){
+  .hero-title-especial{
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+.hero-content h1{
+  font-size: unset;
+}
+.hero-content .hero-title-especial{
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
 }
