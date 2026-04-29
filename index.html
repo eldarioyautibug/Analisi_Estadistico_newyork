@@ -21,7 +21,7 @@
       <div class="logo-box">
         <img src="img/logofigempa.avif" alt="Logo FIGEMPA">
       </div>
-      <h2>Proyecto <br>Estadístic0</h2>
+      <h2>Proyecto <br>Estadístico</h2>
       <p>Información del estado de Nueva York</p>
     </div>
 
@@ -373,7 +373,7 @@
       <div class="contenedor-footer">
         <div class="col-footer">
           <h3>Proyecto</h3>
-          <p>Estadistico del Estado de New York</p>
+          <p>Este proyecto  se basa en las estadísticas de de regulacion de pozos petroleros, gas y otros tipos del Estado de New York</p>
         </div>
 
         <div class="col-footer">
@@ -403,32 +403,6 @@
     </footer>
   </main>
 
-  <script>
-    function navegar(seccion, elemento) {
-      document.querySelectorAll('.pantalla').forEach(p => {
-        p.classList.remove('pantalla-activa');
-      });
-
-      document.getElementById('seccion-' + seccion).classList.add('pantalla-activa');
-
-      document.querySelectorAll('.menu-link').forEach(link => {
-        link.classList.remove('activo');
-      });
-
-      elemento.classList.add('activo');
-
-      if (window.innerWidth <= 920) {
-        document.getElementById("nav-links").classList.remove("show");
-      }
-    }
-
-    const menuToggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
-
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("show");
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
