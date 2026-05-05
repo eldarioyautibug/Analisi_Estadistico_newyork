@@ -315,580 +315,634 @@
         <table class="tabla-datos">
   <thead>
     <tr>
-      <th>Nombre original</th>
-      <th>Nombre</th>
-      <th>Descripción</th>
-      <th>Tipo</th>
-      <th>Subtipo</th>
-      <th>Instrumento</th>
-      <th>Unidad</th>
-      <th>Escala</th>
-    </tr>
-  </thead>
+        <th>Nombre original</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Tipo</th>
+        <th>Subtipo</th>
+        <th>Dominio</th>
+        <th>Rango</th>
+        <th>Instrumento</th>
+        <th>Unidad</th>
+        <th>Escala</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>API_WELL_NUMBER</td>
+        <td>NUMERO_DE_POZO_API</td>
+        <td>Identificador principal del pozo.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Valores únicos para cada pozo}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Registro administrativo</td>
+        <td>N/A</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>API_HOLE_NUMBER</td>
+        <td>NUMERO_DE_ORIFICIO_API</td>
+        <td>Identificador del agujero específico dentro del pozo.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Valores únicos para cada orificio}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Registro administrativo</td>
+        <td>N/A</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>WELL_NAME</td>
+        <td>NOMBRE_DEL_POZO</td>
+        <td>Denominación específica o nombre propio asignado al pozo.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Nombres de los pozos}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Registro administrativo</td>
+        <td>N/A</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>COMPANY_NAME</td>
+        <td>NOMBRE_DE_LA_COMPAÑÍA</td>
+        <td>Nombre de la empresa propietaria o responsable.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Nombres de Compañías}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Registro administrativo</td>
+        <td>N/A</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>OPERATOR_NUMBER</td>
+        <td>NÚMERO_DE_OPERADOR</td>
+        <td>Código asignado a la empresa operadora.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Valores únicos para cada compañía}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Registro administrativo</td>
+        <td>N/A</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>DEC_DATABASE_LINK</td>
+        <td>ENLACE_A_LA_BASE_DE_DATOS_DEL_DEC</td>
+        <td>Enlace directo al registro oficial de la autoridad ambiental.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ datos de la base DEC}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Sistema informático / base de datos</td>
+        <td>N/A</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>COUNTY</td>
+        <td>CONDADO</td>
+        <td>Nombre del condado donde se ubica el pozo.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Nombres de los condados}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Registro administrativo</td>
+        <td>N/A</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>COUNTY_CODE</td>
+        <td>CÓDIGO_DEL_CONDADO</td>
+        <td>Clave numérica asignada al condado de ubicación.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Códigos de condados}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Catálogo oficial</td>
+        <td>Código numérico</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>TOWN</td>
+        <td>MUNICIPIO</td>
+        <td>Localidad donde se encuentra el pozo.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Nombres de las localidades}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Registro administrativo / Censo</td>
+        <td>N/A</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>REGION</td>
+        <td>REGIÓN</td>
+        <td>Zona administrativa o geográfica asignada.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Regiones administrativas}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Registro administrativo / Censo</td>
+        <td>N/A</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>QUAD</td>
+        <td>CUADRANTE</td>
+        <td>Nombre del cuadrante del mapa.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Nombres de cuadrantes}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Cartografía / Planos de cuadrícula</td>
+        <td>Código de cuadrante</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>QUAD_SECTION</td>
+        <td>SECCIÓN_DEL_CUADRANTE</td>
+        <td>Sección específica dentro del cuadrante.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Secciones de cuadrantes}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Cartografía / Planos de cuadrícula</td>
+        <td>Código de cuadrante</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>SURFACE_LONGITUDE</td>
+        <td>LATITUD_DE_LA_SUPERFICIE</td>
+        <td>Coordenadas geográficas del punto de entrada de la superficie.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Continua</td>
+        <td>D = {x | −797.423 ≤ x ≤ −77.744}</td>
+        <td>R = {x | −797.423 ≤ x ≤ −77.744}</td>
+        <td>GPS / Topografía</td>
+        <td>Grados (°)</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>BOTTOM_HOLE_LONGITUDE</td>
+        <td>LONGITUD_DEL_FONDO_DEL_POZO</td>
+        <td>Ubicación geográfica en el punto final de la superficie.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Continua</td>
+        <td>D = {x | −797.423 ≤ x ≤ −77.744}</td>
+        <td>R = {x | −797.423 ≤ x ≤ −77.744}</td>
+        <td>GPS / Topografía</td>
+        <td>Grados (°)</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>BOTTOM_HOLE_LATITUDE</td>
+        <td>LATITUD_DEL_FONDO_DEL_POZO</td>
+        <td>Coordenadas geográficas del punto final en la superficie.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Continua</td>
+        <td>D = {x | 42.006 ≤ x ≤ 425.167}</td>
+        <td>R = {x | 42.006 ≤ x ≤ 425.167}</td>
+        <td>GPS / Topografía</td>
+        <td>Grados (°)</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>LOCATION_1</td>
+        <td>UBICACIÓN_1</td>
+        <td>Referencia textual de la ubicación física.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Coordenadas geográficas válidas}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Descripción de campo / GPS</td>
+        <td>GPS Texto descriptivo</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>GEOREFERENCE</td>
+        <td>GEORREFERENCIA</td>
+        <td>Datos combinados para representación en sistemas GIS.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Continua</td>
+        <td>D = {x | x ∈ Datos geoespaciales (coordenadas o geometrías)}</td>
+        <td>R = D (Datos geoespaciales en la hoja de datos)</td>
+        <td>Software GIS</td>
+        <td>Coordenadas compuestas</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>MAP_SYMBOL</td>
+        <td>SÍMBOLO_DEL_MAPA</td>
+        <td>Ícono gráfico utilizado para representar el pozo en mapas.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Símbolos gráficos de mapa}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Leyenda cartográfica / Software</td>
+        <td>Ícono / Código visual</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>WELL_STATUS</td>
+        <td>ESTADO_DEL_POZO</td>
+        <td>Estado operativo actual: activo, inactivo, sellado.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Estado del pozo}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Reporte operativo</td>
+        <td>Estado</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>STATUS_DATE</td>
+        <td>FECHA_DE_ESTADO</td>
+        <td>Día en que se registró el último cambio en la situación operativa.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Discreta</td>
+        <td>D = {x | x ∈ DD/MM/AAAA}</td>
+        <td>R = {x | 28/11/1911 ≤ x ≤ 11/09/2026}</td>
+        <td>Diario de perforación</td>
+        <td>Fecha</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>PERMIT_APPLICATION_DATE</td>
+        <td>FECHA_DE_SOLICITUD_DE_PERMISO</td>
+        <td>Data de la solicitud del permiso de perforación.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Discreta</td>
+        <td>D = {x | x ∈ DD/MM/AAAA}</td>
+        <td>R = {x | 30/06/1966 ≤ x ≤ 31/03/2026}</td>
+        <td>Diario de perforación</td>
+        <td>Fecha</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>PERMIT_ISSUED_DATE</td>
+        <td>FECHA_DE_EMISIÓN_DEL_PERMISO</td>
+        <td>Momento en que la autoridad otorgó el permiso oficial de ejecución.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Discreta</td>
+        <td>D = {x | x ∈ DD/MM/AAAA}</td>
+        <td>R = {x | 03/02/1916 ≤ x ≤ 01/04/2026}</td>
+        <td>Diario de perforación</td>
+        <td>Fecha</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>DATE_SPUDDED</td>
+        <td>FECHA_DE_INICIO_DE_LA_PERFORACIÓN</td>
+        <td>Día exacto en que comenzó la perforación física.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Discreta</td>
+        <td>D = {x | x ∈ DD/MM/AAAA}</td>
+        <td>R = {x | 01/01/1870 ≤ x ≤ 17/04/2026}</td>
+        <td>Diario de perforación</td>
+        <td>Fecha</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>DATE_OF_TOTAL_DEPTH</td>
+        <td>FECHA_DE_PROFUNDIDAD_TOTAL</td>
+        <td>Momento en el que alcanzó el punto más profundo proyectado.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Discreta</td>
+        <td>D = {x | x ∈ DD/MM/AAAA}</td>
+        <td>R = {x | 26/08/1861 ≤ x ≤ 05/08/2026}</td>
+        <td>Diario de perforación</td>
+        <td>Fecha</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>DATE_WELL_COMPLETED</td>
+        <td>FECHA_DE_FINALIZACIÓN_DEL_POZO</td>
+        <td>Jornada en la que el pozo quedó listo para entrar en fase de producción.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Discreta</td>
+        <td>D = {x | x ∈ DD/MM/AAAA}</td>
+        <td>R = {x | 12/06/1879 ≤ x ≤ 20/11/2026}</td>
+        <td>Diario de perforación</td>
+        <td>Fecha</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>DATE_WELL_PLUGGED</td>
+        <td>FECHA_DE_SELLADO_DEL_POZO</td>
+        <td>Registro de cuándo se realizó el sellado definitivo.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Discreta</td>
+        <td>D = {x | x ∈ DD/MM/AAAA}</td>
+        <td>R = {x | 28/11/1911 ≤ x ≤ 07/04/2026}</td>
+        <td>Diario de perforación</td>
+        <td>Fecha</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>DATE_LAST_MODIFIED</td>
+        <td>FECHA_DE_ÚLTIMA_MODIFICACIÓN</td>
+        <td>Última actualización en la base de datos.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Discreta</td>
+        <td>D = {x | x ∈ DD/MM/AAAA}</td>
+        <td>R = {x | 01/01/1900 ≤ x ≤ 09/04/2026}</td>
+        <td>Diario de perforación</td>
+        <td>Fecha</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>WELL_TYPE</td>
+        <td>TIPO_DE_POZO</td>
+        <td>Clasificación según la función: petróleo, gas, observación o inyección.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Tipos de pozos}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Registro de clasificación</td>
+        <td>N/A</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>ORIGINAL_WELL_TYPE</td>
+        <td>TIPO_DE_POZO_ORIGINAL</td>
+        <td>Clasificación original del pozo al ser perforado.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Tipos de pozos}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Registro histórico</td>
+        <td>N/A</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>SIDETRACK</td>
+        <td>DESVÍO</td>
+        <td>Indica si es una perforación secundaria desde el pozo principal.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ {sí, no}}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Registro de pozo</td>
+        <td>N/A</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>COMPLETION</td>
+        <td>TERMINACIÓN</td>
+        <td>Código de la terminación del pozo.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Códigos de terminación del pozo}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Reporte de terminación</td>
+        <td>N/A</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>SLANT</td>
+        <td>INCLINACIÓN</td>
+        <td>Trayectoria del pozo: vertical, direccional u horizontal.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ {vertical, direccional, horizontal}}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Inclinómetro / Giro</td>
+        <td>Grados (°)</td>
+        <td>Ordinal</td>
+      </tr>
+      <tr>
+        <td>PROPOSED_DEPTH_FT</td>
+        <td>LONGITUD_DE_LA_SUPERFICIE_PIES</td>
+        <td>Profundidad proyectada originalmente, en pies.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Discreta</td>
+        <td>D = {x | x ≥ 0}</td>
+        <td>R = {x | 0 ≤ x ≤ 10260}</td>
+        <td>Diseño de ingeniería</td>
+        <td>Pies (ft)</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>TRUE_VERTICAL_DEPTH_FT</td>
+        <td>PROFUNDIDAD_VERTICAL_REAL_PIES</td>
+        <td>Distancia vertical real desde la superficie al fondo.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Continua</td>
+        <td>D = {x | x ≥ 0}</td>
+        <td>R = {x | 0 ≤ x ≤ 11680}</td>
+        <td>Sensores MWD / LWD</td>
+        <td>Pies (ft)</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>MEASURED_DEPTH_FT</td>
+        <td>PROFUNDIDAD_MEDIDA_PIES</td>
+        <td>Longitud total del trayecto perforado, incluye curvas.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Continua</td>
+        <td>D = {x | x ≥ 0}</td>
+        <td>R = {x | 0 ≤ x ≤ 11680}</td>
+        <td>Contador de tubería / Wireline</td>
+        <td>Pies (ft)</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>KICKOFF_FT</td>
+        <td>PUNTO_DE_INICIO_PIES</td>
+        <td>Profundidad donde se inicia la desviación de un pozo vertical.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Continua</td>
+        <td>D = {x | x ≥ 0}</td>
+        <td>R = {x | 0 ≤ x ≤ 9090}</td>
+        <td>Perfilaje direccional</td>
+        <td>Pies (ft)</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>DRILLED_DEPTH_FT</td>
+        <td>PROFUNDIDAD_PERFORADA_PIES</td>
+        <td>Profundidad final alcanzada durante la perforación.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Continua</td>
+        <td>D = {x | x ≥ 0}</td>
+        <td>R = {x | 0 ≤ x ≤ 11680}</td>
+        <td>Sensor de profundidad</td>
+        <td>Pies (ft)</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>ELEVATION_FT</td>
+        <td>ELEVACIÓN_PIES</td>
+        <td>Altura del pozo sobre el nivel medio del mar.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Continua</td>
+        <td>D = {x | x ∈ Reales}</td>
+        <td>R = {x | 3 ≤ x ≤ 2977}</td>
+        <td>Altímetro / Nivel topográfico</td>
+        <td>Pies (ft)</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>PRODUCING_FIELD</td>
+        <td>CAMPO_PRODUCTOR</td>
+        <td>Nombre del campo petrolero.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Nombres de campos petroleros}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Registro administrativo</td>
+        <td>N/A</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>PRODUCING_FORMATION</td>
+        <td>FORMACIÓN_PRODUCTORA</td>
+        <td>Capa geológica de la cual se extrae el recurso.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Formaciones geológicas}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Registro litoestratigráfico</td>
+        <td>N/A</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>OBJECTIVE_FORMATION</td>
+        <td>FORMACIÓN_OBJETIVO</td>
+        <td>Formación geológica que se busca alcanzar.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Formaciones geológicas objetivo}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Planificación de ingeniería</td>
+        <td>N/A</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>PERMIT_FEE</td>
+        <td>TARIFA_DE_PERMISO</td>
+        <td>Monto pagado por los derechos de permiso.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Continua</td>
+        <td>D = {x | x ≥ 0}</td>
+        <td>R = {x | 0 ≤ x ≤ 11000}</td>
+        <td>Comprobante de pago / Arancel</td>
+        <td>Dólares ($)</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>DEPTH_FEE</td>
+        <td>TARIFA_DE_PROFUNDIDAD</td>
+        <td>Tasa pagada basada en la profundidad del pozo.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Continua</td>
+        <td>D = {x | x ≥ 0}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Comprobante de pago / Arancel</td>
+        <td>Dólares ($)</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>FINANCIAL_SECURITY</td>
+        <td>SEGURIDAD_FINANCIERA</td>
+        <td>Descripción del tipo de garantía financiera.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Continua</td>
+        <td>D = {x | x ≥ 0}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Póliza de seguro / Garantía</td>
+        <td>Dólares ($)</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>STATE_LEASE</td>
+        <td>CONTRATO_DE_ARRENDAMIENTO_ESTATAL</td>
+        <td>Identificador del contrato de arrendamiento con el estado.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Identificadores de contratos}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Contrato de arrendamiento</td>
+        <td>Código de contrato</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>SPACING</td>
+        <td>ESPACIAMIENTO</td>
+        <td>Regulación de distancia mínima entre pozos.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Tipos de espaciamiento}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Normativa técnica</td>
+        <td>N/A</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>SPACING_ACRES</td>
+        <td>SUPERFICIE_DE_ESPACIAMIENTO_(ACRES)</td>
+        <td>Normativa y superficie en acres que debe haber entre unidades para evitar interferencias.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Continua</td>
+        <td>D = {x | x > 0}</td>
+        <td>R = {x | 39.99 ≤ x ≤ 639.94}</td>
+        <td>Plano topográfico</td>
+        <td>Acres</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>INTEGRATION</td>
+        <td>INTEGRACIÓN</td>
+        <td>Estado de la integración de derechos minerales.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Estados de integración de derechos}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Resolución administrativa</td>
+        <td>N/A</td>
+        <td>Nominal</td>
+      </tr>
+      <tr>
+        <td>HEARING_DATE</td>
+        <td>FECHA_DE_AUDIENCIA</td>
+        <td>Día de la sesión pública para tratar asuntos legales o disputas.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Discreta</td>
+        <td>D = {x | x ∈ DD/MM/AAAA}</td>
+        <td>R = {x | 16/05/2006 ≤ x ≤ 08/04/2026}</td>
+        <td>Calendario judicial/legal</td>
+        <td>Fecha</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>DATE_WELL_CONFIDENTIALITY_ENDS</td>
+        <td>FECHA_DE_FINALIZACIÓN_DE_LA_CONFIDENCIALIDAD_DEL_POZO</td>
+        <td>Plazo límite tras el cual los datos técnicos pasan a ser de dominio público.</td>
+        <td><span class="badge cuantitativa">Cuantitativa</span></td>
+        <td>Discreta</td>
+        <td>D = {x | x ∈ DD/MM/AAAA}</td>
+        <td>R = {x | 08/09/1916 ≤ x ≤ 17/10/2026}</td>
+        <td>Calendario legal</td>
+        <td>Fecha</td>
+        <td>Intervalo</td>
+      </tr>
+      <tr>
+        <td>CONFIDENTIALITY_CODE</td>
+        <td>CÓDIGO_DE_CONFIDENCIALIDAD</td>
+        <td>Código que define el nivel de reserva de la información.</td>
+        <td><span class="badge cualitativa">Cualitativa</span></td>
+        <td>Nominal</td>
+        <td>D = {x | x ∈ Códigos de nivel de confidencialidad}</td>
+        <td>R ⊆ D ∪ hoja_de_datos</td>
+        <td>Protocolo de seguridad</td>
+        <td>Código alfanumérico</td>
+        <td>Nominal</td>
+      </tr>
+    </tbody>
+  </table>
 
-  <tbody>
-    <tr>
-  <td>API_WELL_NUMBER</td>
-  <td>NUMERO_DE_POZO_API</td>
-  <td>Identificador principal del pozo.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Registro administrativo</td>
-  <td>N/A</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>API_HOLE_NUMBER</td>
-  <td>NUMERO_DE_ORIFICIO_API</td>
-  <td>Identificador del agujero específico dentro del pozo.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Registro administrativo</td>
-  <td>N/A</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>WELL_NAME</td>
-  <td>NOMBRE_DEL_POZO</td>
-  <td>Denominación específica o nombre propio asignado al pozo.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Registro administrativo</td>
-  <td>N/A</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>COMPANY_NAME</td>
-  <td>NOMBRE_DE_LA_COMPAÑÍA</td>
-  <td>Nombre de la empresa propietaria o responsable.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Registro administrativo</td>
-  <td>N/A</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>OPERATOR_NUMBER</td>
-  <td>NÚMERO_DE_OPERADOR</td>
-  <td>Código asignado a la empresa operadora.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Registro administrativo</td>
-  <td>N/A</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>DEC_DATABASE_LINK</td>
-  <td>ENLACE_A_LA_BASE_DE_DATOS_DEL_DEC</td>
-  <td>Enlace directo al registro oficial de la autoridad ambiental.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Sistema informático / base de datos</td>
-  <td>N/A</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>COUNTY</td>
-  <td>CONDADO</td>
-  <td>Nombre del condado donde se ubica el pozo.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Registro administrativo</td>
-  <td>N/A</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>COUNTY_CODE</td>
-  <td>CÓDIGO_DEL_CONDADO</td>
-  <td>Clave numérica asignada al condado de ubicación.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Catálogo oficial</td>
-  <td>Código numérico</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>TOWN</td>
-  <td>MUNICIPIO</td>
-  <td>Localidad donde se encuentra el pozo.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Registro administrativo / Censo</td>
-  <td>N/A</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>REGION</td>
-  <td>REGIÓN</td>
-  <td>Zona administrativa o geográfica asignada.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Registro administrativo / Censo</td>
-  <td>N/A</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>QUAD</td>
-  <td>CUADRANTE</td>
-  <td>Nombre del cuadrante del mapa.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Cartografía / Planos de cuadrícula</td>
-  <td>Código de cuadrante</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>QUAD_SECTION</td>
-  <td>SECCIÓN_DEL_CUADRANTE</td>
-  <td>Sección específica dentro del cuadrante.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Cartografía / Planos de cuadrícula</td>
-  <td>Código de cuadrante</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>SURFACE_LONGITUDE</td>
-  <td>LATITUD_DE_LA_SUPERFICIE</td>
-  <td>Coordenadas geográficas del punto de entrada de la superficie.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Continua</td>
-  <td>GPS / Topografía</td>
-  <td>Grados (°)</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>BOTTOM_HOLE_LONGITUDE</td>
-  <td>LONGITUD_DEL_FONDO_DEL_POZO</td>
-  <td>Ubicación geográfica en el punto final de la superficie.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Continua</td>
-  <td>GPS / Topografía</td>
-  <td>Grados (°)</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>BOTTOM_HOLE_LATITUDE</td>
-  <td>LATITUD_DEL_FONDO_DEL_POZO</td>
-  <td>Coordenadas geográficas del punto final en la superficie.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Continua</td>
-  <td>GPS / Topografía</td>
-  <td>Grados (°)</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>LOCATION_1</td>
-  <td>UBICACIÓN_1</td>
-  <td>Referencia textual de la ubicación física.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Descripción de campo / GPS</td>
-  <td>GPS Texto descriptivo</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>GEOREFERENCE</td>
-  <td>GEORREFERENCIA</td>
-  <td>Datos combinados para representación en sistemas GIS.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Continua</td>
-  <td>Software GIS</td>
-  <td>Coordenadas compuestas</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>MAP_SYMBOL</td>
-  <td>SÍMBOLO_DEL_MAPA</td>
-  <td>Ícono gráfico utilizado para representar el pozo en mapas.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Leyenda cartográfica / Software</td>
-  <td>Ícono / Código visual</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>WELL_STATUS</td>
-  <td>ESTADO_DEL_POZO</td>
-  <td>Estado operativo actual: activo, inactivo, sellado.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Reporte operativo</td>
-  <td>Estado</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>STATUS_DATE</td>
-  <td>FECHA_DE_ESTADO</td>
-  <td>Día en que se registró el último cambio en la situación operativa.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Discreta</td>
-  <td>Diario de perforación</td>
-  <td>Fecha</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>PERMIT_APPLICATION_DATE</td>
-  <td>FECHA_DE_SOLICITUD_DE_PERMISO</td>
-  <td>Data de la solicitud del permiso de perforación.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Discreta</td>
-  <td>Diario de perforación</td>
-  <td>Fecha</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>PERMIT_ISSUED_DATE</td>
-  <td>FECHA_DE_EMISIÓN_DEL_PERMISO</td>
-  <td>Momento en que la autoridad otorgó el permiso oficial de ejecución.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Discreta</td>
-  <td>Diario de perforación</td>
-  <td>Fecha</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>DATE_SPUDDED</td>
-  <td>FECHA_DE_INICIO_DE_LA_PERFORACIÓN</td>
-  <td>Día exacto en que comenzó la perforación física.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Discreta</td>
-  <td>Diario de perforación</td>
-  <td>Fecha</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>DATE_OF_TOTAL_DEPTH</td>
-  <td>FECHA_DE_PROFUNDIDAD_TOTAL</td>
-  <td>Momento en el que alcanzó el punto más profundo proyectado.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Discreta</td>
-  <td>Diario de perforación</td>
-  <td>Fecha</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>DATE_WELL_COMPLETED</td>
-  <td>FECHA_DE_FINALIZACIÓN_DEL_POZO</td>
-  <td>Jornada en la que el pozo quedó listo para entrar en fase de producción.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Discreta</td>
-  <td>Diario de perforación</td>
-  <td>Fecha</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>DATE_WELL_PLUGGED</td>
-  <td>FECHA_DE_SELLADO_DEL_POZO</td>
-  <td>Registro de cuándo se realizó el sellado definitivo.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Discreta</td>
-  <td>Diario de perforación</td>
-  <td>Fecha</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>DATE_LAST_MODIFIED</td>
-  <td>FECHA_DE_ÚLTIMA_MODIFICACIÓN</td>
-  <td>Última actualización en la base de datos.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Discreta</td>
-  <td>Diario de perforación</td>
-  <td>Fecha</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>WELL_TYPE</td>
-  <td>TIPO_DE_POZO</td>
-  <td>Clasificación según la función: petróleo, gas, observación o inyección.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Registro de clasificación</td>
-  <td>N/A</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>ORIGINAL_WELL_TYPE</td>
-  <td>TIPO_DE_POZO_ORIGINAL</td>
-  <td>Clasificación original del pozo al ser perforado.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Registro histórico</td>
-  <td>N/A</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>SIDETRACK</td>
-  <td>DESVÍO</td>
-  <td>Indica si es una perforación secundaria desde el pozo principal.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Nominal</td>
-  <td>Registro de pozo</td>
-  <td>N/A</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>COMPLETION</td>
-  <td>TERMINACIÓN</td>
-  <td>Código de la terminación del pozo.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Reporte de terminación</td>
-  <td>N/A</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>SLANT</td>
-  <td>INCLINACIÓN</td>
-  <td>Trayectoria del pozo: vertical, direccional u horizontal.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Nominal</td>
-  <td>Inclinómetro / Giro</td>
-  <td>Grados (°)</td>
-  <td>Ordinal</td>
-</tr>
-
-<tr>
-  <td>PROPOSED_DEPTH_FT</td>
-  <td>LONGITUD_DE_LA_SUPERFICIEPIES</td>
-  <td>Profundidad proyectada originalmente, en pies.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Discreta</td>
-  <td>Diseño de ingeniería</td>
-  <td>Pies (ft)</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>TRUE_VERTICAL_DEPTH_FT</td>
-  <td>PROFUNDIDAD_VERTICAL_REAL_PIES</td>
-  <td>Distancia vertical real desde la superficie al fondo.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Continua</td>
-  <td>Sensores MWD / LWD</td>
-  <td>Pies (ft)</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>MEASURED_DEPTH_FT</td>
-  <td>PROFUNDIDAD_MEDIDA_PIES</td>
-  <td>Longitud total del trayecto perforado, incluye curvas.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Continua</td>
-  <td>Contador de tubería / Wireline</td>
-  <td>Pies (ft)</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>KICKOFF_FT</td>
-  <td>PUNTO_DE_INICIO_PIES</td>
-  <td>Profundidad donde se inicia la desviación de un pozo vertical.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Continua</td>
-  <td>Perfilaje direccional</td>
-  <td>Pies (ft)</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>DRILLED_DEPTH_FT</td>
-  <td>PROFUNDIDAD_PERFORADA_PIES</td>
-  <td>Profundidad final alcanzada durante la perforación.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Continua</td>
-  <td>Sensor de profundidad</td>
-  <td>Pies (ft)</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>ELEVATION_FT</td>
-  <td>ELEVACIÓN_PIES</td>
-  <td>Altura del pozo sobre el nivel medio del mar.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Continua</td>
-  <td>Altímetro / Nivel topográfico</td>
-  <td>Pies (ft)</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>PRODUCING_FIELD</td>
-  <td>CAMPO_PRODUCTOR</td>
-  <td>Nombre del campo petrolero.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Registro administrativo</td>
-  <td>N/A</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>PRODUCING_FORMATION</td>
-  <td>FORMACIÓN_PRODUCTORA</td>
-  <td>Capa geológica de la cual se extrae el recurso.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Registro litoestratigráfico</td>
-  <td>N/A</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>OBJECTIVE_FORMATION</td>
-  <td>FORMACIÓN_OBJETIVO</td>
-  <td>Formación geológica que se busca alcanzar.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Planificación de ingeniería</td>
-  <td>N/A</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>PERMIT_FEE</td>
-  <td>TARIFA_DE_PERMISO</td>
-  <td>Monto pagado por los derechos de permiso.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Continua</td>
-  <td>Comprobante de pago / Arancel</td>
-  <td>Dólares ($)</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>DEPTH_FEE</td>
-  <td>TARIFA_DE_PROFUNDIDAD</td>
-  <td>Tasa pagada basada en la profundidad del pozo.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Continua</td>
-  <td>Comprobante de pago / Arancel</td>
-  <td>Dólares ($)</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>FINANCIAL_SECURITY</td>
-  <td>SEGURIDAD_FINANCIERA</td>
-  <td>Descripción del tipo de garantía financiera.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Continua</td>
-  <td>Póliza de seguro / Garantía</td>
-  <td>Dólares ($)</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>STATE_LEASE</td>
-  <td>CONTRATO_DE_ARRENDAMIENTO_ESTATAL</td>
-  <td>Identificador del contrato de arrendamiento con el estado.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Contrato de arrendamiento</td>
-  <td>Código de contrato</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>SPACING</td>
-  <td>ESPACIAMIENTO</td>
-  <td>Regulación de distancia mínima entre pozos.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Normativa técnica</td>
-  <td>N/A</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>SPACING_ACRES</td>
-  <td>SUPERFICIE_DE_ESPACIAMIENTO_(ACRES)</td>
-  <td>Normativa y superficie en acres que debe haber entre unidades para evitar interferencias.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Continua</td>
-  <td>Plano topográfico</td>
-  <td>Acres</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>INTEGRATION</td>
-  <td>INTEGRACIÓN</td>
-  <td>Estado de la integración de derechos minerales.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Resolución administrativa</td>
-  <td>N/A</td>
-  <td>Nominal</td>
-</tr>
-
-<tr>
-  <td>HEARING_DATE</td>
-  <td>FECHA_DE_AUDIENCIA</td>
-  <td>Día de la sesión pública para tratar asuntos legales o disputas.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Discreta</td>
-  <td>Calendario judicial/legal</td>
-  <td>Fecha</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>DATE_WELL_CONFIDENTIALITY_ENDS</td>
-  <td>FECHA_DE_FINALIZACIÓN_DE_LA_CONFIDENCIALIDAD_DEL_POZO</td>
-  <td>Plazo límite tras el cual los datos técnicos pasan a ser de dominio público.</td>
-  <td><span class="badge cuantitativa">Cuantitativa</span></td>
-  <td>Discreta</td>
-  <td>Calendario legal</td>
-  <td>Fecha</td>
-  <td>Intervalo</td>
-</tr>
-
-<tr>
-  <td>CONFIDENTIALITY_CODE</td>
-  <td>CÓDIGO_DE_CONFIDENCIALIDAD</td>
-  <td>Código que define el nivel de reserva de la información.</td>
-  <td><span class="badge cualitativa">Cualitativa</span></td>
-  <td>Nominal</td>
-  <td>Protocolo de seguridad</td>
-  <td>Código alfanumérico</td>
-  <td>Nominal</td>
-</tr>
-  </tbody>
-</table>
         </div>
       </section>
 
