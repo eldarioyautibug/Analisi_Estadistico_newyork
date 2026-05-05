@@ -1908,3 +1908,253 @@ body{
 .tabla-contenedor::-webkit-scrollbar-thumb:hover {
   background: #8a3f55;
 }
+#aviso-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.72);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      animation: overlayFadeIn 0.45s cubic-bezier(0.4, 0, 0.2, 1) both;
+    }
+
+    @keyframes overlayFadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    #aviso-modal {
+      position: relative;
+      background: linear-gradient(180deg, #12171d 0%, #0d1116 100%);
+      border: 1px solid rgba(174, 68, 90, 0.32);
+      border-radius: 24px;
+      padding: 48px 42px 38px;
+      max-width: 440px;
+      width: 92%;
+      text-align: center;
+      box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.60),
+        0 0 40px rgba(174, 68, 90, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      overflow: hidden;
+      animation: modalSlideUp 0.55s cubic-bezier(0.19, 1, 0.22, 1) both;
+    }
+
+    @keyframes modalSlideUp {
+      from { opacity: 0; transform: translateY(44px) scale(0.96); }
+      to   { opacity: 1; transform: translateY(0)    scale(1);    }
+    }
+
+    #aviso-modal::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #662549, #AE445A, #F39F5A);
+      border-radius: 24px 24px 0 0;
+    }
+
+    #aviso-modal::after {
+      content: "";
+      position: absolute;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: radial-gradient(
+        circle at center,
+        rgba(243, 159, 90, 0.07),
+        transparent 60%
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .aviso-icono {
+      position: relative;
+      z-index: 1;
+      width: 66px;
+      height: 66px;
+      border-radius: 20px;
+      margin: 0 auto 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(102,37,73,0.50), rgba(174,68,90,0.38));
+      border: 1px solid rgba(174, 68, 90, 0.42);
+      box-shadow:
+        0 8px 26px rgba(174, 68, 90, 0.30),
+        inset 0 1px 0 rgba(255,255,255,0.06);
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    #aviso-modal:hover .aviso-icono {
+      transform: rotate(-8deg) scale(1.08);
+    }
+
+    .aviso-icono i {
+      font-size: 1.55rem;
+      color: #F39F5A;
+      filter: drop-shadow(0 0 8px rgba(243, 159, 90, 0.55));
+    }
+
+    .aviso-tag {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(174, 68, 90, 0.10);
+      border: 1px solid rgba(174, 68, 90, 0.28);
+      color: #e8bcb9;
+      font-family: 'Poppins', sans-serif;
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .aviso-tag::before {
+      content: "";
+      display: inline-block;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #F39F5A;
+      margin-right: 8px;
+      vertical-align: middle;
+      box-shadow: 0 0 8px #F39F5A;
+      animation: puntoPulso 2s ease-in-out infinite;
+    }
+
+    @keyframes puntoPulso {
+      0%, 100% { opacity: .6; transform: scale(1); }
+      50%       { opacity: 1; transform: scale(1.35); }
+    }
+
+    #aviso-modal h2 {
+      position: relative;
+      z-index: 1;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.65rem;
+      font-weight: 800;
+      margin: 0 0 14px;
+      background: linear-gradient(120deg, #f7f8fa, #F39F5A);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.15;
+    }
+
+    #aviso-modal p {
+      position: relative;
+      z-index: 1;
+      font-family: 'Poppins', sans-serif;
+      font-size: .95rem;
+      color: #e8bcb9;
+      line-height: 1.75;
+      margin: 0 0 28px;
+    }
+
+    #aviso-modal p strong {
+      color: #F39F5A;
+      font-weight: 700;
+    }
+
+    #aviso-modal p em {
+      color: #c99a97;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    .aviso-divider {
+      position: relative;
+      z-index: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(243,159,90,0.20), transparent);
+      margin-bottom: 26px;
+    }
+
+    #aviso-btn {
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: 'Poppins', sans-serif;
+      font-size: .95rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      color: #fff0f2;
+      background: linear-gradient(135deg, #662549, #AE445A);
+      border: 1px solid rgba(243, 159, 90, 0.18);
+      border-radius: 14px;
+      padding: 14px 36px;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(174, 68, 90, 0.30);
+      transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    #aviso-btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #AE445A, #F39F5A);
+      z-index: -1;
+      opacity: 0;
+      transition: opacity .4s ease;
+    }
+
+    #aviso-btn::after {
+      content: "";
+      position: absolute;
+      top: 0; left: -100%;
+      width: 60%; height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.20), transparent);
+      transition: left .6s ease;
+    }
+
+    #aviso-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 34px rgba(243, 159, 90, 0.40);
+      color: #fff;
+    }
+
+    #aviso-btn:hover::before { opacity: 1; }
+    #aviso-btn:hover::after  { left: 120%; }
+    #aviso-btn:active        { transform: translateY(-1px); }
+
+    #aviso-btn i {
+      font-size: .9rem;
+      transition: transform .35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    #aviso-btn:hover i {
+      transform: rotate(-8deg) scale(1.2);
+    }
+
+    .aviso-nota {
+      position: relative;
+      z-index: 1;
+      margin-top: 14px;
+      font-family: 'Poppins', sans-serif;
+      font-size: .76rem;
+      color: #5c6b7a;
+      letter-spacing: .02em;
+    }
+
+    #aviso-overlay.cerrando {
+      animation: overlayFadeIn .3s ease reverse forwards;
+    }
+
+    #aviso-overlay.cerrando #aviso-modal {
+      animation: modalSalida .3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    @keyframes modalSalida {
+      to { opacity: 0; transform: translateY(20px) scale(0.96); }
+    }

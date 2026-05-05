@@ -204,3 +204,16 @@ function initScrollProgress(bar) {
 
   update();
 }
+function cerrarAviso() {
+      const overlay = document.getElementById('aviso-overlay');
+      overlay.classList.add('cerrando');
+      setTimeout(() => overlay.remove(), 320);
+    }
+
+    document.getElementById('aviso-overlay').addEventListener('click', function(e) {
+      if (e.target === this) cerrarAviso();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') cerrarAviso();
+    });
