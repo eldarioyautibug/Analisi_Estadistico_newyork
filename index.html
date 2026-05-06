@@ -14,17 +14,15 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<div id="aviso-overlay">
-    <div id="aviso-modal">
+<body>
 
+  <div id="aviso-overlay">
+    <div id="aviso-modal">
       <div class="aviso-icono">
         <i class="fa-solid fa-circle-info"></i>
       </div>
-
       <span class="aviso-tag">Aviso</span>
-
       <h2>Nota sobre el Proyecto</h2>
-
       <p>
         Este sitio tiene un propósito <strong>estrictamente académico</strong>
         y se encuentra en proceso de construcción. Toda la información,
@@ -32,19 +30,14 @@
         <em>únicamente con fines de aprendizaje</em> y no representan
         orientación ni consejo de carácter profesional.
       </p>
-
       <div class="aviso-divider"></div>
-
       <button id="aviso-btn" onclick="cerrarAviso()">
         <i class="fa-solid fa-check"></i>
         Entendido
       </button>
-
       <p class="aviso-nota">Al continuar aceptas las condiciones del proyecto.</p>
-
     </div>
   </div>
-<body>
 
   <aside class="sidebar">
     <div class="sidebar-top">
@@ -60,10 +53,24 @@
     <nav class="side-nav">
       <ul class="nav-links" id="nav-links">
         <li><a onclick="navegar('inicio', this)" class="menu-link activo"><i class="fas fa-house"></i><span>Inicio</span></a></li>
+        <li><a onclick="navegar('introduccion', this)" class="menu-link"><i class="fas fa-book-open"></i><span>Introducción</span></a></li>
+        <li><a onclick="navegar('mapaweb', this)" class="menu-link"><i class="fas fa-map-location-dot"></i><span>Mapa Web</span></a></li>
         <li><a onclick="navegar('descriptiva', this)" class="menu-link"><i class="fas fa-chart-column"></i><span>Descriptiva</span></a></li>
         <li><a onclick="navegar('inferencial', this)" class="menu-link"><i class="fas fa-superscript"></i><span>Inferencial</span></a></li>
         <li><a onclick="navegar('regresion', this)" class="menu-link"><i class="fas fa-chart-line"></i><span>Regresión</span></a></li>
         <li><a onclick="navegar('machine', this)" class="menu-link"><i class="fas fa-microchip"></i><span>Machine Learning</span></a></li>
+
+        <li class="nav-mas" id="nav-mas">
+          <a onclick="toggleMasMenu(this, event)" class="menu-link menu-link-mas">
+            <i class="fas fa-ellipsis"></i><span>Más</span>
+            <i class="fas fa-chevron-down chevron-mas"></i>
+          </a>
+          <ul class="submenu-mas">
+            <li><a onclick="navegar('nosotros', this)" class="menu-link sub-link"><i class="fas fa-users"></i><span>Sobre nosotros</span></a></li>
+            <li><a onclick="navegar('herramientas', this)" class="menu-link sub-link"><i class="fas fa-toolbox"></i><span>Herramientas utilizadas</span></a></li>
+            <li><a onclick="navegar('conclusiones', this)" class="menu-link sub-link"><i class="fas fa-flag-checkered"></i><span>Conclusiones</span></a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </aside>
@@ -71,32 +78,156 @@
   <main class="main-content">
 
 
-   <div id="seccion-inicio" class="pantalla pantalla-activa">
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="hero-title-especial">Pozos regulados de petróleo, gas y otros tipos<br>desde 1860</h1>
-      <p>
-        Análisis estadístico aplicado a la regulación de pozos en el estado de Nueva York.
-      </p>
-    </div>
-  </section>
+    <div id="seccion-inicio" class="pantalla pantalla-activa">
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1 class="hero-title-especial">Análisis estadístico aplicado a la regulación de pozos en el estado de Nueva York</h1>
+        </div>
+      </section>
 
+      <section class="section-box">
+        <div class="section-head center">
+          <span class="section-tag">Quiénes somos</span>
+          <h2>Misión y Visión</h2>
+          <p>Los pilares que guían el desarrollo de este proyecto estadístico.</p>
+        </div>
+
+        <div class="mv-grid">
+          <article class="mv-card">
+            <div class="mv-icono"><i class="fas fa-bullseye"></i></div>
+            <span class="mv-numero">01</span>
+            <h3>Misión</h3>
+            <p>
+              Aplicar métodos estadísticos rigurosos para identificar y cuantificar los factores que
+              explican la regulación, distribución y evolución histórica de los pozos de petróleo,
+              gas y otros tipos en el estado de Nueva York.
+            </p>
+          </article>
+
+          <article class="mv-card">
+            <div class="mv-icono"><i class="fas fa-eye"></i></div>
+            <span class="mv-numero">02</span>
+            <h3>Visión</h3>
+            <p>
+              Convertirnos en una referencia académica para el análisis estadístico de información
+              energética histórica, revelando tendencias reales y el potencial de los datos como
+              herramienta para la toma de decisiones informadas.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-box">
+        <div class="section-head center">
+          <span class="section-tag">Inspiración</span>
+          <h2>Motivación del proyecto</h2>
+        </div>
+
+        <div class="motivacion-grid">
+          <div class="motivacion-imagen">
+            <img src="img/facultad.jpg" alt="Facultad de Ingeniería en Geología, Minas, Petróleos y Ambiental — UCE">
+            <span class="motivacion-pin"><i class="fas fa-location-dot"></i> FIGEMPA</span>
+          </div>
+
+          <div class="motivacion-texto">
+            <span class="objetivo-kicker">Universidad Central del Ecuador</span>
+            <h3>¿Por qué este proyecto?</h3>
+            <p>
+              Como estudiantes de la Universidad Central del Ecuador, desarrollamos este proyecto con el
+              propósito de aplicar la <strong>estadística como herramienta fundamental</strong> en el análisis
+              de datos del mundo real.
+            </p>
+            <p>
+              Nuestro objetivo no es solo interpretar la información, sino también destacar la relevancia de
+              la estadística en la <em>toma de decisiones informadas</em> dentro del ámbito profesional
+              relacionado con nuestra carrera en geología, minas, petróleos y ambiental.
+            </p>
+            <a href="https://www.uce.edu.ec" target="_blank" rel="noopener" class="btn-primary">
+              <i class="fas fa-graduation-cap" style="margin-right:8px;"></i> Universidad Central del Ecuador
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <div id="seccion-introduccion" class="pantalla">
+      <section class="subhero" style="background-image: url('img/img1.jpeg');">
+        <div class="subhero-overlay"></div>
+        <div class="subhero-content">
+          <span class="section-tag">Punto de partida</span>
+          <h2>Introducción</h2>
+          <p>Contexto, ubicación geográfica y objetivos del proyecto.</p>
+        </div>
+      </section>
 
       <section class="objetivos-editorial section-box">
         <div class="objetivos-wrap">
-
           <article class="bloque-principal">
             <span class="objetivo-kicker">01 · Contexto</span>
             <h2>Planteamiento del problema</h2>
             <p>
-              La información sobre exploración y explotación de hidrocarburos en Nueva York
-              requiere organización y análisis para comprender su comportamiento histórico,
-              territorial y su evolución dentro del marco regulatorio.
+              La industria de los hidrocarburos en el estado de Nueva York posee un registro histórico
+              de más de un siglo y medio que abarca pozos de petróleo, gas y otros tipos regulados
+              desde 1860. Sin embargo, la enorme cantidad de variables, fechas y atributos contenidos
+              en la base oficial dificulta interpretar de forma clara cómo ha evolucionado la actividad
+              de extracción y qué patrones territoriales o temporales presenta.
             </p>
-            <a href="#" class="btn-primary">Ver dataset</a>
+            <p>
+              Por ello surge la necesidad de <strong>organizar, depurar y analizar estadísticamente</strong>
+              la información disponible para revelar las características más relevantes del sector,
+              identificar tendencias en la perforación, profundidad, ubicación y estado operativo de
+              los pozos, y así contribuir con una visión cuantitativa que sirva como base para futuros
+              estudios académicos y profesionales.
+            </p>
+            <a href="#" class="btn-primary"><i class="fas fa-database" style="margin-right:8px;"></i> Ver dataset</a>
           </article>
+        </div>
+      </section>
 
+      <section class="mapa-ubicacion section-box">
+        <div class="mapa-texto mapa-texto-especial">
+          <span class="section-tag">Visualización</span>
+          <h2 class="titulo-mapa-ubicacion">Mapa de ubicación</h2>
+          <p>
+            Explora el mapa con los controles de zoom o descárgalo en formato PDF para revisarlo en alta resolución.
+          </p>
+          <a href="https://drive.google.com/file/d/1lU-RwP9HGDtwSc0oyNCV-CayF34rNab0/view?usp=sharing"
+             target="_blank" rel="noopener" class="btn-mapa-especial">
+            <i class="fas fa-file-pdf" style="margin-right:10px;"></i> Descargar PDF
+          </a>
+        </div>
+
+        <div class="mapa-imagen-wrap">
+          <div class="franja-mapa"></div>
+          <div class="mapa-imagen" id="mapa-zoom-wrap">
+            <div class="mapa-zoom-viewport" id="mapa-zoom-viewport">
+              <img src="img/mapadallyana.png" alt="Mapa de ubicación" id="mapa-zoom-img">
+            </div>
+
+            <div class="zoom-controls" id="zoom-controls">
+              <button class="zoom-btn" type="button" onclick="ajustarZoom(-0.2)" title="Alejar">
+                <i class="fas fa-magnifying-glass-minus"></i>
+              </button>
+              <span class="zoom-nivel" id="zoom-nivel">100%</span>
+              <button class="zoom-btn" type="button" onclick="ajustarZoom(0.2)" title="Acercar">
+                <i class="fas fa-magnifying-glass-plus"></i>
+              </button>
+              <span class="zoom-sep"></span>
+              <button class="zoom-btn" type="button" onclick="resetZoom()" title="Restablecer">
+                <i class="fas fa-arrows-rotate"></i>
+              </button>
+              <button class="zoom-btn" type="button" onclick="abrirZoomFull()" title="Pantalla completa">
+                <i class="fas fa-expand"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="objetivos-editorial section-box">
+        <div class="objetivos-wrap">
           <div class="objetivos-grid">
             <article class="bloque-secundario">
               <span class="objetivo-kicker">02 · Dirección</span>
@@ -116,38 +247,29 @@
                 <li>Analizar la situación actual de los pozos regulados de petróleo, gas y otros tipos en el estado de Nueva York, a través del estudio de sus características principales mediante medidas estadísticas descriptivas.</li>
                 <li>Aplicar modelos de probabilidad para obtener conclusiones sobre el comportamiento de los pozos regulados de petróleo, gas y otros tipos en el estado de Nueva York, a partir del análisis de los datos disponibles.</li>
                 <li>Identificar y determinar relaciones entre las variables asociadas a los pozos regulados de petróleo, gas y otros tipos en el estado de Nueva York, con el propósito de realizar estimaciones y fortalecer el análisis predictivo.</li>
-
               </ul>
             </article>
           </div>
+        </div>
+      </section>
+    </div>
 
+
+    <div id="seccion-mapaweb" class="pantalla">
+      <section class="subhero" style="background-image: url('img/img1.jpeg');">
+        <div class="subhero-overlay"></div>
+        <div class="subhero-content">
+          <span class="section-tag">Exploración web</span>
+          <h2>Mapa Web</h2>
+          <p>Visor interactivo de los datos espaciales del proyecto.</p>
         </div>
       </section>
 
-      <section class="mapa-ubicacion section-box">
-  <div class="mapa-texto mapa-texto-especial">
-    <span class="section-tag">Visualización</span>
-    <h2 class="titulo-mapa-ubicacion">Mapa de ubicación</h2>
-    <p>
-    </p>
-    <a href="https://drive.google.com/file/d/1lU-RwP9HGDtwSc0oyNCV-CayF34rNab0/view?usp=sharing" class="btn-mapa-especial">Abrir mapa</a>
-  </div>
-
-  <div class="mapa-imagen-wrap">
-    <div class="franja-mapa"></div>
-    <div class="mapa-imagen">
-      <img src="img/mapadallyana.png" alt="Mapa de ubicación">
-    </div>
-  </div>
-</section>
-
       <section class="mapa-interactivo section-box">
         <div class="section-head center">
-          <span class="section-tag">Exploración web</span>
-          <h2>Mapa interactivo</h2>
-          <p>
-            Explora los datos espaciales por medio del visor web desarrollado para el proyecto.
-          </p>
+          <span class="section-tag">QGIS2Web</span>
+          <h2>Visor interactivo</h2>
+          <p>Explora los datos espaciales por medio del visor web desarrollado para el proyecto.</p>
         </div>
 
         <div class="mapa-container">
@@ -155,6 +277,7 @@
         </div>
       </section>
     </div>
+
 
     <div id="seccion-descriptiva" class="pantalla">
       <section class="subhero" style="background-image: url('img/imagen2.jpg');">
@@ -167,143 +290,49 @@
       </section>
 
       <section class="section-box">
-  <div class="section-head">
-    <span class="section-tag">Fundamentos</span>
-    <h2>Conceptos básicos</h2>
-    <p>Definiciones estadísticas aplicadas al proyecto de pozos regulados en Nueva York.</p>
-  </div>
+        <div class="section-head">
+          <span class="section-tag">Fundamentos</span>
+          <h2>Conceptos básicos</h2>
+          <p>Definiciones estadísticas aplicadas al proyecto de pozos regulados en Nueva York.</p>
+        </div>
 
-  <div class="conceptos-grid conceptos-grid-3">
+        <div class="conceptos-grid conceptos-grid-3">
+          <div class="tarjeta-concepto tarjeta-simbolica">
+            <div class="icono-tarjeta"><i class="fas fa-globe-americas"></i></div>
+            <h3>Población</h3>
+            <p>Los más de 40,000 registros de pozos de petróleo, gas y otros tipos en Nueva York desde 1860</p>
+  
+            <div class="bloque-simbolico">
+              <span class="titulo-simbolico">Simbólico</span>
+              <code>U = {x | x ∈ pozos NY}<br>N = 40,000+</code>
+            </div>
+          </div>
 
-    <div class="tarjeta-concepto tarjeta-simbolica">
-      <div class="icono-tarjeta"><i class="fas fa-globe-americas"></i></div>
-      <h3>Población</h3>
-      <p>
-        Es el conjunto total de elementos con características comunes que forman parte del estudio.
-      </p>
+          <div class="tarjeta-concepto tarjeta-simbolica">
+            <div class="icono-tarjeta"><i class="fas fa-user"></i></div>
+            <h3>Individuo</h3>
+            <p>Cada pozo individual identificado por su número API único.</p>
+            
+            <div class="bloque-simbolico">
+              <span class="titulo-simbolico">Simbólico</span>
+              <code>xᵢ ∈ U<br>xᵢ = pozo individual</code>
+            </div>
+          </div>
 
-      <div class="aplicacion-proyecto">
-        <strong>Aplicación:</strong>
-        Los más de 40,000 registros de pozos de petróleo, gas y otros tipos en Nueva York desde 1860.
-      </div>
+          <div class="tarjeta-concepto tarjeta-simbolica">
+            <div class="icono-tarjeta"><i class="fas fa-vial"></i></div>
+            <h3>Muestra</h3>
+            <p>Un grupo de pozos seleccionados para analizar profundidad, estado o evolución temporal.</p>
+            
+            <div class="bloque-simbolico">
+              <span class="titulo-simbolico">Simbólico</span>
+              <code>M ⊂ U<br>n = tamaño de muestra</code>
+            </div>
+          </div>
 
-      <div class="bloque-simbolico">
-        <span class="titulo-simbolico">Simbólico</span>
-        <code>
-          U = {x | x ∈ pozos NY}<br>
-          N = 40,000+
-        </code>
-      </div>
-    </div>
-
-    <div class="tarjeta-concepto tarjeta-simbolica">
-      <div class="icono-tarjeta"><i class="fas fa-user"></i></div>
-      <h3>Individuo</h3>
-      <p>
-        Es cada unidad investigada que forma parte de la población.
-      </p>
-
-      <div class="aplicacion-proyecto">
-        <strong>Aplicación:</strong>
-        Cada pozo individual identificado por su número API único.
-      </div>
-
-      <div class="bloque-simbolico">
-        <span class="titulo-simbolico">Simbólico</span>
-        <code>
-          xᵢ ∈ U<br>
-          xᵢ = pozo individual
-        </code>
-      </div>
-    </div>
-
-    <div class="tarjeta-concepto tarjeta-simbolica">
-      <div class="icono-tarjeta"><i class="fas fa-vial"></i></div>
-      <h3>Muestra</h3>
-      <p>
-        Es una porción representativa de la población utilizada para inferir resultados.
-      </p>
-
-      <div class="aplicacion-proyecto">
-        <strong>Aplicación:</strong>
-        Un grupo de pozos seleccionados para analizar profundidad, estado o evolución temporal.
-      </div>
-
-      <div class="bloque-simbolico">
-        <span class="titulo-simbolico">Simbólico</span>
-        <code>
-          M ⊂ U<br>
-          n = tamaño de muestra
-        </code>
-      </div>
-    </div>
-
-    <div class="tarjeta-concepto tarjeta-simbolica">
-      <div class="icono-tarjeta"><i class="fas fa-random"></i></div>
-      <h3>Muestreo</h3>
-      <p>
-        Es el procedimiento utilizado para seleccionar los elementos que conformarán la muestra.
-      </p>
-
-      <div class="aplicacion-proyecto">
-        <strong>Aplicación:</strong>
-        Selección aleatoria o estratificada de pozos por década, región, tipo de pozo o estado operativo.
-      </div>
-
-      <div class="bloque-simbolico">
-        <span class="titulo-simbolico">Simbólico</span>
-        <code>
-          M = {x₁, x₂, ..., xₙ}<br>
-          P(xᵢ) = 1/N
-        </code>
-      </div>
-    </div>
-
-    <div class="tarjeta-concepto tarjeta-simbolica">
-      <div class="icono-tarjeta"><i class="fas fa-chart-line"></i></div>
-      <h3>Necesidad</h3>
-      <p>
-        Justifica por qué se trabaja con una muestra y no necesariamente con toda la población.
-      </p>
-
-      <div class="aplicacion-proyecto">
-        <strong>Aplicación:</strong>
-        Permite analizar tendencias sin procesar manualmente todos los registros del dataset.
-      </div>
-
-      <div class="bloque-simbolico">
-        <span class="titulo-simbolico">Simbólico</span>
-        <code>
-          n &lt; N<br>
-          análisis eficiente
-        </code>
-      </div>
-    </div>
-
-    <div class="tarjeta-concepto tarjeta-simbolica">
-      <div class="icono-tarjeta"><i class="fas fa-balance-scale"></i></div>
-      <h3>Representatividad</h3>
-      <p>
-        Indica que la muestra debe reflejar adecuadamente las características de la población.
-      </p>
-
-      <div class="aplicacion-proyecto">
-        <strong>Aplicación:</strong>
-        La muestra debe incluir pozos antiguos y recientes, activos e inactivos, y diferentes regiones.
-      </div>
-
-      <div class="bloque-simbolico">
-        <span class="titulo-simbolico">Simbólico</span>
-        <code>
-          M ≈ U<br>
-          error muestral → mínimo
-        </code>
-      </div>
-    </div>
-
-  </div>
-</section>
-
+          
+        </div>
+      </section>
       <section class="section-box">
         <div class="section-head">
           <span class="section-tag">Estructura</span>
@@ -312,637 +341,75 @@
         </div>
 
         <div class="tabla-contenedor">
-        <table class="tabla-datos">
-  <thead>
-    <tr>
-        <th>Nombre original</th>
-        <th>Nombre</th>
-        <th>Descripción</th>
-        <th>Tipo</th>
-        <th>Subtipo</th>
-        <th>Dominio</th>
-        <th>Rango</th>
-        <th>Instrumento</th>
-        <th>Unidad</th>
-        <th>Escala</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>API_WELL_NUMBER</td>
-        <td>NUMERO_DE_POZO_API</td>
-        <td>Identificador principal del pozo.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Valores únicos para cada pozo}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Registro administrativo</td>
-        <td>N/A</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>API_HOLE_NUMBER</td>
-        <td>NUMERO_DE_ORIFICIO_API</td>
-        <td>Identificador del agujero específico dentro del pozo.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Valores únicos para cada orificio}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Registro administrativo</td>
-        <td>N/A</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>WELL_NAME</td>
-        <td>NOMBRE_DEL_POZO</td>
-        <td>Denominación específica o nombre propio asignado al pozo.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Nombres de los pozos}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Registro administrativo</td>
-        <td>N/A</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>COMPANY_NAME</td>
-        <td>NOMBRE_DE_LA_COMPAÑÍA</td>
-        <td>Nombre de la empresa propietaria o responsable.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Nombres de Compañías}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Registro administrativo</td>
-        <td>N/A</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>OPERATOR_NUMBER</td>
-        <td>NÚMERO_DE_OPERADOR</td>
-        <td>Código asignado a la empresa operadora.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Valores únicos para cada compañía}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Registro administrativo</td>
-        <td>N/A</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>DEC_DATABASE_LINK</td>
-        <td>ENLACE_A_LA_BASE_DE_DATOS_DEL_DEC</td>
-        <td>Enlace directo al registro oficial de la autoridad ambiental.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ datos de la base DEC}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Sistema informático / base de datos</td>
-        <td>N/A</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>COUNTY</td>
-        <td>CONDADO</td>
-        <td>Nombre del condado donde se ubica el pozo.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Nombres de los condados}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Registro administrativo</td>
-        <td>N/A</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>COUNTY_CODE</td>
-        <td>CÓDIGO_DEL_CONDADO</td>
-        <td>Clave numérica asignada al condado de ubicación.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Códigos de condados}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Catálogo oficial</td>
-        <td>Código numérico</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>TOWN</td>
-        <td>MUNICIPIO</td>
-        <td>Localidad donde se encuentra el pozo.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Nombres de las localidades}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Registro administrativo / Censo</td>
-        <td>N/A</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>REGION</td>
-        <td>REGIÓN</td>
-        <td>Zona administrativa o geográfica asignada.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Regiones administrativas}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Registro administrativo / Censo</td>
-        <td>N/A</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>QUAD</td>
-        <td>CUADRANTE</td>
-        <td>Nombre del cuadrante del mapa.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Nombres de cuadrantes}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Cartografía / Planos de cuadrícula</td>
-        <td>Código de cuadrante</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>QUAD_SECTION</td>
-        <td>SECCIÓN_DEL_CUADRANTE</td>
-        <td>Sección específica dentro del cuadrante.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Secciones de cuadrantes}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Cartografía / Planos de cuadrícula</td>
-        <td>Código de cuadrante</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>SURFACE_LONGITUDE</td>
-        <td>LATITUD_DE_LA_SUPERFICIE</td>
-        <td>Coordenadas geográficas del punto de entrada de la superficie.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Continua</td>
-        <td>D = {x | −797.423 ≤ x ≤ −77.744}</td>
-        <td>R = {x | −797.423 ≤ x ≤ −77.744}</td>
-        <td>GPS / Topografía</td>
-        <td>Grados (°)</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>BOTTOM_HOLE_LONGITUDE</td>
-        <td>LONGITUD_DEL_FONDO_DEL_POZO</td>
-        <td>Ubicación geográfica en el punto final de la superficie.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Continua</td>
-        <td>D = {x | −797.423 ≤ x ≤ −77.744}</td>
-        <td>R = {x | −797.423 ≤ x ≤ −77.744}</td>
-        <td>GPS / Topografía</td>
-        <td>Grados (°)</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>BOTTOM_HOLE_LATITUDE</td>
-        <td>LATITUD_DEL_FONDO_DEL_POZO</td>
-        <td>Coordenadas geográficas del punto final en la superficie.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Continua</td>
-        <td>D = {x | 42.006 ≤ x ≤ 425.167}</td>
-        <td>R = {x | 42.006 ≤ x ≤ 425.167}</td>
-        <td>GPS / Topografía</td>
-        <td>Grados (°)</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>LOCATION_1</td>
-        <td>UBICACIÓN_1</td>
-        <td>Referencia textual de la ubicación física.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Coordenadas geográficas válidas}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Descripción de campo / GPS</td>
-        <td>GPS Texto descriptivo</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>GEOREFERENCE</td>
-        <td>GEORREFERENCIA</td>
-        <td>Datos combinados para representación en sistemas GIS.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Continua</td>
-        <td>D = {x | x ∈ Datos geoespaciales (coordenadas o geometrías)}</td>
-        <td>R = D (Datos geoespaciales en la hoja de datos)</td>
-        <td>Software GIS</td>
-        <td>Coordenadas compuestas</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>MAP_SYMBOL</td>
-        <td>SÍMBOLO_DEL_MAPA</td>
-        <td>Ícono gráfico utilizado para representar el pozo en mapas.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Símbolos gráficos de mapa}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Leyenda cartográfica / Software</td>
-        <td>Ícono / Código visual</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>WELL_STATUS</td>
-        <td>ESTADO_DEL_POZO</td>
-        <td>Estado operativo actual: activo, inactivo, sellado.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Estado del pozo}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Reporte operativo</td>
-        <td>Estado</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>STATUS_DATE</td>
-        <td>FECHA_DE_ESTADO</td>
-        <td>Día en que se registró el último cambio en la situación operativa.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Discreta</td>
-        <td>D = {x | x ∈ DD/MM/AAAA}</td>
-        <td>R = {x | 28/11/1911 ≤ x ≤ 11/09/2026}</td>
-        <td>Diario de perforación</td>
-        <td>Fecha</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>PERMIT_APPLICATION_DATE</td>
-        <td>FECHA_DE_SOLICITUD_DE_PERMISO</td>
-        <td>Data de la solicitud del permiso de perforación.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Discreta</td>
-        <td>D = {x | x ∈ DD/MM/AAAA}</td>
-        <td>R = {x | 30/06/1966 ≤ x ≤ 31/03/2026}</td>
-        <td>Diario de perforación</td>
-        <td>Fecha</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>PERMIT_ISSUED_DATE</td>
-        <td>FECHA_DE_EMISIÓN_DEL_PERMISO</td>
-        <td>Momento en que la autoridad otorgó el permiso oficial de ejecución.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Discreta</td>
-        <td>D = {x | x ∈ DD/MM/AAAA}</td>
-        <td>R = {x | 03/02/1916 ≤ x ≤ 01/04/2026}</td>
-        <td>Diario de perforación</td>
-        <td>Fecha</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>DATE_SPUDDED</td>
-        <td>FECHA_DE_INICIO_DE_LA_PERFORACIÓN</td>
-        <td>Día exacto en que comenzó la perforación física.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Discreta</td>
-        <td>D = {x | x ∈ DD/MM/AAAA}</td>
-        <td>R = {x | 01/01/1870 ≤ x ≤ 17/04/2026}</td>
-        <td>Diario de perforación</td>
-        <td>Fecha</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>DATE_OF_TOTAL_DEPTH</td>
-        <td>FECHA_DE_PROFUNDIDAD_TOTAL</td>
-        <td>Momento en el que alcanzó el punto más profundo proyectado.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Discreta</td>
-        <td>D = {x | x ∈ DD/MM/AAAA}</td>
-        <td>R = {x | 26/08/1861 ≤ x ≤ 05/08/2026}</td>
-        <td>Diario de perforación</td>
-        <td>Fecha</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>DATE_WELL_COMPLETED</td>
-        <td>FECHA_DE_FINALIZACIÓN_DEL_POZO</td>
-        <td>Jornada en la que el pozo quedó listo para entrar en fase de producción.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Discreta</td>
-        <td>D = {x | x ∈ DD/MM/AAAA}</td>
-        <td>R = {x | 12/06/1879 ≤ x ≤ 20/11/2026}</td>
-        <td>Diario de perforación</td>
-        <td>Fecha</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>DATE_WELL_PLUGGED</td>
-        <td>FECHA_DE_SELLADO_DEL_POZO</td>
-        <td>Registro de cuándo se realizó el sellado definitivo.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Discreta</td>
-        <td>D = {x | x ∈ DD/MM/AAAA}</td>
-        <td>R = {x | 28/11/1911 ≤ x ≤ 07/04/2026}</td>
-        <td>Diario de perforación</td>
-        <td>Fecha</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>DATE_LAST_MODIFIED</td>
-        <td>FECHA_DE_ÚLTIMA_MODIFICACIÓN</td>
-        <td>Última actualización en la base de datos.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Discreta</td>
-        <td>D = {x | x ∈ DD/MM/AAAA}</td>
-        <td>R = {x | 01/01/1900 ≤ x ≤ 09/04/2026}</td>
-        <td>Diario de perforación</td>
-        <td>Fecha</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>WELL_TYPE</td>
-        <td>TIPO_DE_POZO</td>
-        <td>Clasificación según la función: petróleo, gas, observación o inyección.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Tipos de pozos}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Registro de clasificación</td>
-        <td>N/A</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>ORIGINAL_WELL_TYPE</td>
-        <td>TIPO_DE_POZO_ORIGINAL</td>
-        <td>Clasificación original del pozo al ser perforado.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Tipos de pozos}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Registro histórico</td>
-        <td>N/A</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>SIDETRACK</td>
-        <td>DESVÍO</td>
-        <td>Indica si es una perforación secundaria desde el pozo principal.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ {sí, no}}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Registro de pozo</td>
-        <td>N/A</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>COMPLETION</td>
-        <td>TERMINACIÓN</td>
-        <td>Código de la terminación del pozo.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Códigos de terminación del pozo}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Reporte de terminación</td>
-        <td>N/A</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>SLANT</td>
-        <td>INCLINACIÓN</td>
-        <td>Trayectoria del pozo: vertical, direccional u horizontal.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ {vertical, direccional, horizontal}}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Inclinómetro / Giro</td>
-        <td>Grados (°)</td>
-        <td>Ordinal</td>
-      </tr>
-      <tr>
-        <td>PROPOSED_DEPTH_FT</td>
-        <td>LONGITUD_DE_LA_SUPERFICIE_PIES</td>
-        <td>Profundidad proyectada originalmente, en pies.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Discreta</td>
-        <td>D = {x | x ≥ 0}</td>
-        <td>R = {x | 0 ≤ x ≤ 10260}</td>
-        <td>Diseño de ingeniería</td>
-        <td>Pies (ft)</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>TRUE_VERTICAL_DEPTH_FT</td>
-        <td>PROFUNDIDAD_VERTICAL_REAL_PIES</td>
-        <td>Distancia vertical real desde la superficie al fondo.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Continua</td>
-        <td>D = {x | x ≥ 0}</td>
-        <td>R = {x | 0 ≤ x ≤ 11680}</td>
-        <td>Sensores MWD / LWD</td>
-        <td>Pies (ft)</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>MEASURED_DEPTH_FT</td>
-        <td>PROFUNDIDAD_MEDIDA_PIES</td>
-        <td>Longitud total del trayecto perforado, incluye curvas.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Continua</td>
-        <td>D = {x | x ≥ 0}</td>
-        <td>R = {x | 0 ≤ x ≤ 11680}</td>
-        <td>Contador de tubería / Wireline</td>
-        <td>Pies (ft)</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>KICKOFF_FT</td>
-        <td>PUNTO_DE_INICIO_PIES</td>
-        <td>Profundidad donde se inicia la desviación de un pozo vertical.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Continua</td>
-        <td>D = {x | x ≥ 0}</td>
-        <td>R = {x | 0 ≤ x ≤ 9090}</td>
-        <td>Perfilaje direccional</td>
-        <td>Pies (ft)</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>DRILLED_DEPTH_FT</td>
-        <td>PROFUNDIDAD_PERFORADA_PIES</td>
-        <td>Profundidad final alcanzada durante la perforación.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Continua</td>
-        <td>D = {x | x ≥ 0}</td>
-        <td>R = {x | 0 ≤ x ≤ 11680}</td>
-        <td>Sensor de profundidad</td>
-        <td>Pies (ft)</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>ELEVATION_FT</td>
-        <td>ELEVACIÓN_PIES</td>
-        <td>Altura del pozo sobre el nivel medio del mar.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Continua</td>
-        <td>D = {x | x ∈ Reales}</td>
-        <td>R = {x | 3 ≤ x ≤ 2977}</td>
-        <td>Altímetro / Nivel topográfico</td>
-        <td>Pies (ft)</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>PRODUCING_FIELD</td>
-        <td>CAMPO_PRODUCTOR</td>
-        <td>Nombre del campo petrolero.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Nombres de campos petroleros}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Registro administrativo</td>
-        <td>N/A</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>PRODUCING_FORMATION</td>
-        <td>FORMACIÓN_PRODUCTORA</td>
-        <td>Capa geológica de la cual se extrae el recurso.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Formaciones geológicas}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Registro litoestratigráfico</td>
-        <td>N/A</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>OBJECTIVE_FORMATION</td>
-        <td>FORMACIÓN_OBJETIVO</td>
-        <td>Formación geológica que se busca alcanzar.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Formaciones geológicas objetivo}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Planificación de ingeniería</td>
-        <td>N/A</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>PERMIT_FEE</td>
-        <td>TARIFA_DE_PERMISO</td>
-        <td>Monto pagado por los derechos de permiso.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Continua</td>
-        <td>D = {x | x ≥ 0}</td>
-        <td>R = {x | 0 ≤ x ≤ 11000}</td>
-        <td>Comprobante de pago / Arancel</td>
-        <td>Dólares ($)</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>DEPTH_FEE</td>
-        <td>TARIFA_DE_PROFUNDIDAD</td>
-        <td>Tasa pagada basada en la profundidad del pozo.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Continua</td>
-        <td>D = {x | x ≥ 0}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Comprobante de pago / Arancel</td>
-        <td>Dólares ($)</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>FINANCIAL_SECURITY</td>
-        <td>SEGURIDAD_FINANCIERA</td>
-        <td>Descripción del tipo de garantía financiera.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Continua</td>
-        <td>D = {x | x ≥ 0}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Póliza de seguro / Garantía</td>
-        <td>Dólares ($)</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>STATE_LEASE</td>
-        <td>CONTRATO_DE_ARRENDAMIENTO_ESTATAL</td>
-        <td>Identificador del contrato de arrendamiento con el estado.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Identificadores de contratos}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Contrato de arrendamiento</td>
-        <td>Código de contrato</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>SPACING</td>
-        <td>ESPACIAMIENTO</td>
-        <td>Regulación de distancia mínima entre pozos.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Tipos de espaciamiento}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Normativa técnica</td>
-        <td>N/A</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>SPACING_ACRES</td>
-        <td>SUPERFICIE_DE_ESPACIAMIENTO_(ACRES)</td>
-        <td>Normativa y superficie en acres que debe haber entre unidades para evitar interferencias.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Continua</td>
-        <td>D = {x | x > 0}</td>
-        <td>R = {x | 39.99 ≤ x ≤ 639.94}</td>
-        <td>Plano topográfico</td>
-        <td>Acres</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>INTEGRATION</td>
-        <td>INTEGRACIÓN</td>
-        <td>Estado de la integración de derechos minerales.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Estados de integración de derechos}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Resolución administrativa</td>
-        <td>N/A</td>
-        <td>Nominal</td>
-      </tr>
-      <tr>
-        <td>HEARING_DATE</td>
-        <td>FECHA_DE_AUDIENCIA</td>
-        <td>Día de la sesión pública para tratar asuntos legales o disputas.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Discreta</td>
-        <td>D = {x | x ∈ DD/MM/AAAA}</td>
-        <td>R = {x | 16/05/2006 ≤ x ≤ 08/04/2026}</td>
-        <td>Calendario judicial/legal</td>
-        <td>Fecha</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>DATE_WELL_CONFIDENTIALITY_ENDS</td>
-        <td>FECHA_DE_FINALIZACIÓN_DE_LA_CONFIDENCIALIDAD_DEL_POZO</td>
-        <td>Plazo límite tras el cual los datos técnicos pasan a ser de dominio público.</td>
-        <td><span class="badge cuantitativa">Cuantitativa</span></td>
-        <td>Discreta</td>
-        <td>D = {x | x ∈ DD/MM/AAAA}</td>
-        <td>R = {x | 08/09/1916 ≤ x ≤ 17/10/2026}</td>
-        <td>Calendario legal</td>
-        <td>Fecha</td>
-        <td>Intervalo</td>
-      </tr>
-      <tr>
-        <td>CONFIDENTIALITY_CODE</td>
-        <td>CÓDIGO_DE_CONFIDENCIALIDAD</td>
-        <td>Código que define el nivel de reserva de la información.</td>
-        <td><span class="badge cualitativa">Cualitativa</span></td>
-        <td>Nominal</td>
-        <td>D = {x | x ∈ Códigos de nivel de confidencialidad}</td>
-        <td>R ⊆ D ∪ hoja_de_datos</td>
-        <td>Protocolo de seguridad</td>
-        <td>Código alfanumérico</td>
-        <td>Nominal</td>
-      </tr>
-    </tbody>
-  </table>
-
+          <table class="tabla-datos">
+            <thead>
+              <tr>
+                <th>Nombre original</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Tipo</th>
+                <th>Subtipo</th>
+                <th>Dominio</th>
+                <th>Rango</th>
+                <th>Instrumento</th>
+                <th>Unidad</th>
+                <th>Escala</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>API_WELL_NUMBER</td><td>NUMERO_DE_POZO_API</td><td>Identificador principal del pozo.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Valores únicos para cada pozo}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Registro administrativo</td><td>N/A</td><td>Nominal</td></tr>
+              <tr><td>API_HOLE_NUMBER</td><td>NUMERO_DE_ORIFICIO_API</td><td>Identificador del agujero específico dentro del pozo.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Valores únicos para cada orificio}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Registro administrativo</td><td>N/A</td><td>Nominal</td></tr>
+              <tr><td>WELL_NAME</td><td>NOMBRE_DEL_POZO</td><td>Denominación específica o nombre propio asignado al pozo.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Nombres de los pozos}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Registro administrativo</td><td>N/A</td><td>Nominal</td></tr>
+              <tr><td>COMPANY_NAME</td><td>NOMBRE_DE_LA_COMPAÑÍA</td><td>Nombre de la empresa propietaria o responsable.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Nombres de Compañías}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Registro administrativo</td><td>N/A</td><td>Nominal</td></tr>
+              <tr><td>OPERATOR_NUMBER</td><td>NÚMERO_DE_OPERADOR</td><td>Código asignado a la empresa operadora.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Valores únicos para cada compañía}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Registro administrativo</td><td>N/A</td><td>Nominal</td></tr>
+              <tr><td>DEC_DATABASE_LINK</td><td>ENLACE_A_LA_BASE_DE_DATOS_DEL_DEC</td><td>Enlace directo al registro oficial de la autoridad ambiental.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ datos de la base DEC}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Sistema informático / base de datos</td><td>N/A</td><td>Nominal</td></tr>
+              <tr><td>COUNTY</td><td>CONDADO</td><td>Nombre del condado donde se ubica el pozo.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Nombres de los condados}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Registro administrativo</td><td>N/A</td><td>Nominal</td></tr>
+              <tr><td>COUNTY_CODE</td><td>CÓDIGO_DEL_CONDADO</td><td>Clave numérica asignada al condado de ubicación.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Códigos de condados}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Catálogo oficial</td><td>Código numérico</td><td>Nominal</td></tr>
+              <tr><td>TOWN</td><td>MUNICIPIO</td><td>Localidad donde se encuentra el pozo.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Nombres de las localidades}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Registro administrativo / Censo</td><td>N/A</td><td>Nominal</td></tr>
+              <tr><td>REGION</td><td>REGIÓN</td><td>Zona administrativa o geográfica asignada.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Regiones administrativas}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Registro administrativo / Censo</td><td>N/A</td><td>Nominal</td></tr>
+              <tr><td>QUAD</td><td>CUADRANTE</td><td>Nombre del cuadrante del mapa.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Nombres de cuadrantes}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Cartografía / Planos de cuadrícula</td><td>Código de cuadrante</td><td>Nominal</td></tr>
+              <tr><td>QUAD_SECTION</td><td>SECCIÓN_DEL_CUADRANTE</td><td>Sección específica dentro del cuadrante.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Secciones de cuadrantes}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Cartografía / Planos de cuadrícula</td><td>Código de cuadrante</td><td>Nominal</td></tr>
+              <tr><td>SURFACE_LONGITUDE</td><td>LATITUD_DE_LA_SUPERFICIE</td><td>Coordenadas geográficas del punto de entrada de la superficie.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Continua</td><td>D = {x | −797.423 ≤ x ≤ −77.744}</td><td>R = {x | −797.423 ≤ x ≤ −77.744}</td><td>GPS / Topografía</td><td>Grados (°)</td><td>Intervalo</td></tr>
+              <tr><td>BOTTOM_HOLE_LONGITUDE</td><td>LONGITUD_DEL_FONDO_DEL_POZO</td><td>Ubicación geográfica en el punto final de la superficie.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Continua</td><td>D = {x | −797.423 ≤ x ≤ −77.744}</td><td>R = {x | −797.423 ≤ x ≤ −77.744}</td><td>GPS / Topografía</td><td>Grados (°)</td><td>Intervalo</td></tr>
+              <tr><td>BOTTOM_HOLE_LATITUDE</td><td>LATITUD_DEL_FONDO_DEL_POZO</td><td>Coordenadas geográficas del punto final en la superficie.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Continua</td><td>D = {x | 42.006 ≤ x ≤ 425.167}</td><td>R = {x | 42.006 ≤ x ≤ 425.167}</td><td>GPS / Topografía</td><td>Grados (°)</td><td>Intervalo</td></tr>
+              <tr><td>LOCATION_1</td><td>UBICACIÓN_1</td><td>Referencia textual de la ubicación física.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Coordenadas geográficas válidas}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Descripción de campo / GPS</td><td>GPS Texto descriptivo</td><td>Intervalo</td></tr>
+              <tr><td>GEOREFERENCE</td><td>GEORREFERENCIA</td><td>Datos combinados para representación en sistemas GIS.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Continua</td><td>D = {x | x ∈ Datos geoespaciales (coordenadas o geometrías)}</td><td>R = D (Datos geoespaciales en la hoja de datos)</td><td>Software GIS</td><td>Coordenadas compuestas</td><td>Intervalo</td></tr>
+              <tr><td>MAP_SYMBOL</td><td>SÍMBOLO_DEL_MAPA</td><td>Ícono gráfico utilizado para representar el pozo en mapas.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Símbolos gráficos de mapa}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Leyenda cartográfica / Software</td><td>Ícono / Código visual</td><td>Nominal</td></tr>
+              <tr><td>WELL_STATUS</td><td>ESTADO_DEL_POZO</td><td>Estado operativo actual: activo, inactivo, sellado.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Estado del pozo}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Reporte operativo</td><td>Estado</td><td>Nominal</td></tr>
+              <tr><td>STATUS_DATE</td><td>FECHA_DE_ESTADO</td><td>Día en que se registró el último cambio en la situación operativa.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Discreta</td><td>D = {x | x ∈ DD/MM/AAAA}</td><td>R = {x | 28/11/1911 ≤ x ≤ 11/09/2026}</td><td>Diario de perforación</td><td>Fecha</td><td>Intervalo</td></tr>
+              <tr><td>PERMIT_APPLICATION_DATE</td><td>FECHA_DE_SOLICITUD_DE_PERMISO</td><td>Data de la solicitud del permiso de perforación.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Discreta</td><td>D = {x | x ∈ DD/MM/AAAA}</td><td>R = {x | 30/06/1966 ≤ x ≤ 31/03/2026}</td><td>Diario de perforación</td><td>Fecha</td><td>Intervalo</td></tr>
+              <tr><td>PERMIT_ISSUED_DATE</td><td>FECHA_DE_EMISIÓN_DEL_PERMISO</td><td>Momento en que la autoridad otorgó el permiso oficial de ejecución.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Discreta</td><td>D = {x | x ∈ DD/MM/AAAA}</td><td>R = {x | 03/02/1916 ≤ x ≤ 01/04/2026}</td><td>Diario de perforación</td><td>Fecha</td><td>Intervalo</td></tr>
+              <tr><td>DATE_SPUDDED</td><td>FECHA_DE_INICIO_DE_LA_PERFORACIÓN</td><td>Día exacto en que comenzó la perforación física.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Discreta</td><td>D = {x | x ∈ DD/MM/AAAA}</td><td>R = {x | 01/01/1870 ≤ x ≤ 17/04/2026}</td><td>Diario de perforación</td><td>Fecha</td><td>Intervalo</td></tr>
+              <tr><td>DATE_OF_TOTAL_DEPTH</td><td>FECHA_DE_PROFUNDIDAD_TOTAL</td><td>Momento en el que alcanzó el punto más profundo proyectado.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Discreta</td><td>D = {x | x ∈ DD/MM/AAAA}</td><td>R = {x | 26/08/1861 ≤ x ≤ 05/08/2026}</td><td>Diario de perforación</td><td>Fecha</td><td>Intervalo</td></tr>
+              <tr><td>DATE_WELL_COMPLETED</td><td>FECHA_DE_FINALIZACIÓN_DEL_POZO</td><td>Jornada en la que el pozo quedó listo para entrar en fase de producción.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Discreta</td><td>D = {x | x ∈ DD/MM/AAAA}</td><td>R = {x | 12/06/1879 ≤ x ≤ 20/11/2026}</td><td>Diario de perforación</td><td>Fecha</td><td>Intervalo</td></tr>
+              <tr><td>DATE_WELL_PLUGGED</td><td>FECHA_DE_SELLADO_DEL_POZO</td><td>Registro de cuándo se realizó el sellado definitivo.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Discreta</td><td>D = {x | x ∈ DD/MM/AAAA}</td><td>R = {x | 28/11/1911 ≤ x ≤ 07/04/2026}</td><td>Diario de perforación</td><td>Fecha</td><td>Intervalo</td></tr>
+              <tr><td>DATE_LAST_MODIFIED</td><td>FECHA_DE_ÚLTIMA_MODIFICACIÓN</td><td>Última actualización en la base de datos.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Discreta</td><td>D = {x | x ∈ DD/MM/AAAA}</td><td>R = {x | 01/01/1900 ≤ x ≤ 09/04/2026}</td><td>Diario de perforación</td><td>Fecha</td><td>Intervalo</td></tr>
+              <tr><td>WELL_TYPE</td><td>TIPO_DE_POZO</td><td>Clasificación según la función: petróleo, gas, observación o inyección.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Tipos de pozos}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Registro de clasificación</td><td>N/A</td><td>Nominal</td></tr>
+              <tr><td>ORIGINAL_WELL_TYPE</td><td>TIPO_DE_POZO_ORIGINAL</td><td>Clasificación original del pozo al ser perforado.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Tipos de pozos}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Registro histórico</td><td>N/A</td><td>Nominal</td></tr>
+              <tr><td>SIDETRACK</td><td>DESVÍO</td><td>Indica si es una perforación secundaria desde el pozo principal.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Nominal</td><td>D = {x | x ∈ {sí, no}}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Registro de pozo</td><td>N/A</td><td>Nominal</td></tr>
+              <tr><td>COMPLETION</td><td>TERMINACIÓN</td><td>Código de la terminación del pozo.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Códigos de terminación del pozo}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Reporte de terminación</td><td>N/A</td><td>Nominal</td></tr>
+              <tr><td>SLANT</td><td>INCLINACIÓN</td><td>Trayectoria del pozo: vertical, direccional u horizontal.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Nominal</td><td>D = {x | x ∈ {vertical, direccional, horizontal}}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Inclinómetro / Giro</td><td>Grados (°)</td><td>Ordinal</td></tr>
+              <tr><td>PROPOSED_DEPTH_FT</td><td>LONGITUD_DE_LA_SUPERFICIE_PIES</td><td>Profundidad proyectada originalmente, en pies.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Discreta</td><td>D = {x | x ≥ 0}</td><td>R = {x | 0 ≤ x ≤ 10260}</td><td>Diseño de ingeniería</td><td>Pies (ft)</td><td>Intervalo</td></tr>
+              <tr><td>TRUE_VERTICAL_DEPTH_FT</td><td>PROFUNDIDAD_VERTICAL_REAL_PIES</td><td>Distancia vertical real desde la superficie al fondo.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Continua</td><td>D = {x | x ≥ 0}</td><td>R = {x | 0 ≤ x ≤ 11680}</td><td>Sensores MWD / LWD</td><td>Pies (ft)</td><td>Intervalo</td></tr>
+              <tr><td>MEASURED_DEPTH_FT</td><td>PROFUNDIDAD_MEDIDA_PIES</td><td>Longitud total del trayecto perforado, incluye curvas.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Continua</td><td>D = {x | x ≥ 0}</td><td>R = {x | 0 ≤ x ≤ 11680}</td><td>Contador de tubería / Wireline</td><td>Pies (ft)</td><td>Intervalo</td></tr>
+              <tr><td>KICKOFF_FT</td><td>PUNTO_DE_INICIO_PIES</td><td>Profundidad donde se inicia la desviación de un pozo vertical.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Continua</td><td>D = {x | x ≥ 0}</td><td>R = {x | 0 ≤ x ≤ 9090}</td><td>Perfilaje direccional</td><td>Pies (ft)</td><td>Intervalo</td></tr>
+              <tr><td>DRILLED_DEPTH_FT</td><td>PROFUNDIDAD_PERFORADA_PIES</td><td>Profundidad final alcanzada durante la perforación.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Continua</td><td>D = {x | x ≥ 0}</td><td>R = {x | 0 ≤ x ≤ 11680}</td><td>Sensor de profundidad</td><td>Pies (ft)</td><td>Intervalo</td></tr>
+              <tr><td>ELEVATION_FT</td><td>ELEVACIÓN_PIES</td><td>Altura del pozo sobre el nivel medio del mar.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Continua</td><td>D = {x | x ∈ Reales}</td><td>R = {x | 3 ≤ x ≤ 2977}</td><td>Altímetro / Nivel topográfico</td><td>Pies (ft)</td><td>Intervalo</td></tr>
+              <tr><td>PRODUCING_FIELD</td><td>CAMPO_PRODUCTOR</td><td>Nombre del campo petrolero.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Nombres de campos petroleros}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Registro administrativo</td><td>N/A</td><td>Nominal</td></tr>
+              <tr><td>PRODUCING_FORMATION</td><td>FORMACIÓN_PRODUCTORA</td><td>Capa geológica de la cual se extrae el recurso.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Formaciones geológicas}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Registro litoestratigráfico</td><td>N/A</td><td>Nominal</td></tr>
+              <tr><td>OBJECTIVE_FORMATION</td><td>FORMACIÓN_OBJETIVO</td><td>Formación geológica que se busca alcanzar.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Formaciones geológicas objetivo}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Planificación de ingeniería</td><td>N/A</td><td>Nominal</td></tr>
+              <tr><td>PERMIT_FEE</td><td>TARIFA_DE_PERMISO</td><td>Monto pagado por los derechos de permiso.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Continua</td><td>D = {x | x ≥ 0}</td><td>R = {x | 0 ≤ x ≤ 11000}</td><td>Comprobante de pago / Arancel</td><td>Dólares ($)</td><td>Intervalo</td></tr>
+              <tr><td>DEPTH_FEE</td><td>TARIFA_DE_PROFUNDIDAD</td><td>Tasa pagada basada en la profundidad del pozo.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Continua</td><td>D = {x | x ≥ 0}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Comprobante de pago / Arancel</td><td>Dólares ($)</td><td>Intervalo</td></tr>
+              <tr><td>FINANCIAL_SECURITY</td><td>SEGURIDAD_FINANCIERA</td><td>Descripción del tipo de garantía financiera.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Continua</td><td>D = {x | x ≥ 0}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Póliza de seguro / Garantía</td><td>Dólares ($)</td><td>Intervalo</td></tr>
+              <tr><td>STATE_LEASE</td><td>CONTRATO_DE_ARRENDAMIENTO_ESTATAL</td><td>Identificador del contrato de arrendamiento con el estado.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Identificadores de contratos}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Contrato de arrendamiento</td><td>Código de contrato</td><td>Nominal</td></tr>
+              <tr><td>SPACING</td><td>ESPACIAMIENTO</td><td>Regulación de distancia mínima entre pozos.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Tipos de espaciamiento}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Normativa técnica</td><td>N/A</td><td>Nominal</td></tr>
+              <tr><td>SPACING_ACRES</td><td>SUPERFICIE_DE_ESPACIAMIENTO_(ACRES)</td><td>Normativa y superficie en acres que debe haber entre unidades para evitar interferencias.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Continua</td><td>D = {x | x > 0}</td><td>R = {x | 39.99 ≤ x ≤ 639.94}</td><td>Plano topográfico</td><td>Acres</td><td>Intervalo</td></tr>
+              <tr><td>INTEGRATION</td><td>INTEGRACIÓN</td><td>Estado de la integración de derechos minerales.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Estados de integración de derechos}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Resolución administrativa</td><td>N/A</td><td>Nominal</td></tr>
+              <tr><td>HEARING_DATE</td><td>FECHA_DE_AUDIENCIA</td><td>Día de la sesión pública para tratar asuntos legales o disputas.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Discreta</td><td>D = {x | x ∈ DD/MM/AAAA}</td><td>R = {x | 16/05/2006 ≤ x ≤ 08/04/2026}</td><td>Calendario judicial/legal</td><td>Fecha</td><td>Intervalo</td></tr>
+              <tr><td>DATE_WELL_CONFIDENTIALITY_ENDS</td><td>FECHA_DE_FINALIZACIÓN_DE_LA_CONFIDENCIALIDAD_DEL_POZO</td><td>Plazo límite tras el cual los datos técnicos pasan a ser de dominio público.</td><td><span class="badge cuantitativa">Cuantitativa</span></td><td>Discreta</td><td>D = {x | x ∈ DD/MM/AAAA}</td><td>R = {x | 08/09/1916 ≤ x ≤ 17/10/2026}</td><td>Calendario legal</td><td>Fecha</td><td>Intervalo</td></tr>
+              <tr><td>CONFIDENTIALITY_CODE</td><td>CÓDIGO_DE_CONFIDENCIALIDAD</td><td>Código que define el nivel de reserva de la información.</td><td><span class="badge cualitativa">Cualitativa</span></td><td>Nominal</td><td>D = {x | x ∈ Códigos de nivel de confidencialidad}</td><td>R ⊆ D ∪ hoja_de_datos</td><td>Protocolo de seguridad</td><td>Código alfanumérico</td><td>Nominal</td></tr>
+            </tbody>
+          </table>
         </div>
       </section>
 
@@ -960,14 +427,12 @@
             <p>Próximamente.</p>
             <a href="#" class="btn-link">Ver reporte</a>
           </article>
-
           <article class="rpub-card">
             <span class="mini-etiqueta">RPubs</span>
             <h3>Próximamente</h3>
             <p>Próximamente.</p>
             <a href="#" class="btn-link">Ver reporte</a>
           </article>
-
           <article class="rpub-card">
             <span class="mini-etiqueta">RPubs</span>
             <h3>Próximamente</h3>
@@ -977,6 +442,7 @@
         </div>
       </section>
     </div>
+
 
     <div id="seccion-inferencial" class="pantalla">
       <section class="subhero" style="background-image: url('img/img22.jpeg');">
@@ -997,31 +463,17 @@
         <div class="tabla-contenedor">
           <table class="tabla-datos">
             <thead>
-              <tr>
-                <th>Modelo</th>
-                <th>Parámetro</th>
-                <th>Valor</th>
-                <th>Interpretación</th>
-              </tr>
+              <tr><th>Modelo</th><th>Parámetro</th><th>Valor</th><th>Interpretación</th></tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Modelo A</td>
-                <td>θ1</td>
-                <td>0.00</td>
-                <td>Resultado provisional.</td>
-              </tr>
-              <tr>
-                <td>Modelo B</td>
-                <td>θ2</td>
-                <td>0.00</td>
-                <td>Resultado provisional.</td>
-              </tr>
+              <tr><td>Modelo A</td><td>θ1</td><td>0.00</td><td>Resultado provisional.</td></tr>
+              <tr><td>Modelo B</td><td>θ2</td><td>0.00</td><td>Resultado provisional.</td></tr>
             </tbody>
           </table>
         </div>
       </section>
     </div>
+
 
     <div id="seccion-regresion" class="pantalla">
       <section class="subhero" style="background-image: url('img/img4.jpeg');">
@@ -1046,7 +498,6 @@
             <p>Próximamente.</p>
             <a href="#" class="btn-link">Ver análisis</a>
           </article>
-
           <article class="rpub-card">
             <span class="mini-etiqueta">Modelo</span>
             <h3>Próximamente</h3>
@@ -1056,6 +507,7 @@
         </div>
       </section>
     </div>
+
 
     <div id="seccion-machine" class="pantalla">
       <section class="subhero" style="background-image: url('img/img3.jpeg');">
@@ -1079,7 +531,6 @@
             <h3>Próximamente</h3>
             <p>Texto.</p>
           </div>
-
           <div class="tarjeta-concepto">
             <div class="icono-tarjeta"><i class="fas fa-database"></i></div>
             <h3>Próximamente</h3>
@@ -1089,11 +540,161 @@
       </section>
     </div>
 
+
+    <div id="seccion-nosotros" class="pantalla">
+      <section class="subhero" style="background-image: url('img/img1.jpeg');">
+        <div class="subhero-overlay"></div>
+        <div class="subhero-content">
+          <span class="section-tag">Equipo</span>
+          <h2>Sobre nosotros</h2>
+          <p>Conoce a las personas detrás del proyecto estadístico.</p>
+        </div>
+      </section>
+
+      <section class="section-box">
+        <div class="section-head">
+          <span class="section-tag">Integrantes</span>
+          <h2>Equipo de trabajo</h2>
+          <p>Estudiantes de FIGEMPA · Universidad Central del Ecuador.</p>
+        </div>
+
+        <div class="personas-grid">
+          <article class="persona-card">
+            <div class="persona-foto">
+              <img src="img/dallyana.jpg" alt="Dallyana Lozano" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="persona-fallback"><i class="fas fa-user"></i></div>
+            </div>
+            <h3>Dallyana Lozano</h3>
+            <p class="persona-rol">Estudiante FIGEMPA</p>
+            <a href="#" target="_blank" rel="noopener" class="btn-link"><i class="fas fa-file-lines"></i> Ver CV</a>
+          </article>
+
+          <article class="persona-card">
+            <div class="persona-foto">
+              <img src="img/jennifer-c.jpg" alt="Jennifer Cordones" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="persona-fallback"><i class="fas fa-user"></i></div>
+            </div>
+            <h3>Jennifer Cordones</h3>
+            <p class="persona-rol">Estudiante FIGEMPA</p>
+            <a href="#" target="_blank" rel="noopener" class="btn-link"><i class="fas fa-file-lines"></i> Ver CV</a>
+          </article>
+
+          <article class="persona-card">
+            <div class="persona-foto">
+              <img src="img/jennifer-o.jpg" alt="Jennifer Oyasa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="persona-fallback"><i class="fas fa-user"></i></div>
+            </div>
+            <h3>Jennifer Oyasa</h3>
+            <p class="persona-rol">Estudiante FIGEMPA</p>
+            <a href="#" target="_blank" rel="noopener" class="btn-link"><i class="fas fa-file-lines"></i> Ver CV</a>
+          </article>
+
+          <article class="persona-card">
+            <div class="persona-foto">
+              <img src="img/eduardo.jpg" alt="Eduardo Loayza" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="persona-fallback"><i class="fas fa-user"></i></div>
+            </div>
+            <h3>Eduardo Loayza</h3>
+            <p class="persona-rol">Estudiante FIGEMPA</p>
+            <a href="#" target="_blank" rel="noopener" class="btn-link"><i class="fas fa-file-lines"></i> Ver CV</a>
+          </article>
+        </div>
+      </section>
+    </div>
+
+
+    <div id="seccion-herramientas" class="pantalla">
+      <section class="subhero" style="background-image: url('img/img1.jpeg');">
+        <div class="subhero-overlay"></div>
+        <div class="subhero-content">
+          <span class="section-tag">Stack tecnológico</span>
+          <h2>Herramientas utilizadas</h2>
+          <p>Software empleado en el desarrollo del proyecto.</p>
+        </div>
+      </section>
+
+      <section class="section-box">
+        <div class="section-head">
+          <span class="section-tag">Tecnología</span>
+          <h2>Aplicaciones del proyecto</h2>
+          <p>Estas son las principales herramientas que hacen posible el análisis y la visualización.</p>
+        </div>
+
+        <div class="herramientas-grid">
+          <article class="herramienta-card">
+            <div class="herramienta-logo">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="Visual Studio Code">
+            </div>
+            <h3>Visual Studio Code</h3>
+            <p>Editor de código fuente utilizado para construir todo el sitio web (HTML, CSS y JavaScript).</p>
+            <a href="https://code.visualstudio.com" target="_blank" rel="noopener" class="btn-link">Sitio oficial</a>
+          </article>
+
+          <article class="herramienta-card">
+            <div class="herramienta-logo">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/QGIS_logo%2C_2017.svg/1200px-QGIS_logo%2C_2017.svg.png" alt="QGIS">
+            </div>
+            <h3>QGIS</h3>
+            <p>Sistema de información geográfica para el análisis espacial y la generación del mapa interactivo.</p>
+            <a href="https://qgis.org" target="_blank" rel="noopener" class="btn-link">Sitio oficial</a>
+          </article>
+
+          <article class="herramienta-card">
+            <div class="herramienta-logo">
+              <img src="https://www.kaggle.com/static/images/site-logo.svg" alt="Kaggle">
+            </div>
+            <h3>Kaggle</h3>
+            <p>Plataforma utilizada para acceder al dataset de pozos y explorar conjuntos de datos relacionados.</p>
+            <a href="https://www.kaggle.com" target="_blank" rel="noopener" class="btn-link">Sitio oficial</a>
+          </article>
+        </div>
+      </section>
+    </div>
+
+
+    <div id="seccion-conclusiones" class="pantalla">
+      <section class="subhero" style="background-image: url('img/img1.jpeg');">
+        <div class="subhero-overlay"></div>
+        <div class="subhero-content">
+          <span class="section-tag">Cierre</span>
+          <h2>Conclusiones</h2>
+          <p>Reflexiones y resultados finales del proyecto.</p>
+        </div>
+      </section>
+
+      <section class="section-box">
+        <div class="section-head">
+          <span class="section-tag">Resultados</span>
+          <h2>Hallazgos principales</h2>
+          <p>Próximamente.</p>
+        </div>
+
+        <div class="rpubs-grid">
+          <article class="rpub-card">
+            <span class="mini-etiqueta">Hallazgo</span>
+            <h3>Próximamente</h3>
+            <p>Próximamente.</p>
+          </article>
+          <article class="rpub-card">
+            <span class="mini-etiqueta">Hallazgo</span>
+            <h3>Próximamente</h3>
+            <p>Próximamente.</p>
+          </article>
+          <article class="rpub-card">
+            <span class="mini-etiqueta">Hallazgo</span>
+            <h3>Próximamente</h3>
+            <p>Próximamente.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+
+
     <footer class="pie-pagina">
       <div class="contenedor-footer">
         <div class="col-footer">
           <h3>Proyecto</h3>
-          <p>Este proyecto  se basa en las estadísticas de de regulacion de pozos petroleros, gas y otros tipos del Estado de New York</p>
+          <p>Este proyecto se basa en las estadísticas de regulación de pozos petroleros, gas y otros tipos del Estado de Nueva York.</p>
         </div>
 
         <div class="col-footer">

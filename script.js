@@ -18,7 +18,6 @@ function navegar(seccion, elemento) {
   }
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
-
   setTimeout(rescanReveals, 60);
 }
 
@@ -40,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => loader.classList.add('hidden'), 350);
     setTimeout(() => loader.remove(), 1100);
   });
-
   setTimeout(() => loader.classList.add('hidden'), 2500);
 
   const menuToggle = document.getElementById("menu-toggle");
@@ -64,17 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   autoMarkReveals();
-
   initRevealObserver();
-
   initCardTilt();
-
   initParallax();
-
   initScrollProgress(progress);
 });
-
-
 
 function autoMarkReveals() {
   document.querySelectorAll('.section-head, .bloque-principal, .bloque-secundario, .mapa-texto, .mapa-imagen-wrap, .pie-pagina .col-footer')
@@ -127,7 +119,7 @@ function initCardTilt() {
   if (window.matchMedia('(pointer: coarse)').matches) return;
 
   const cards = document.querySelectorAll('.tarjeta-concepto, .rpub-card, .bloque-secundario');
-  const MAX = 6; 
+  const MAX = 6;
 
   cards.forEach(card => {
     card.style.transformStyle = 'preserve-3d';
@@ -164,7 +156,6 @@ function initParallax() {
     heroes.forEach(h => {
       const rect = h.getBoundingClientRect();
       if (rect.bottom > 0 && rect.top < window.innerHeight) {
-        const before = h.querySelector(':scope > *:first-child') || h;
         const content = h.querySelector('.hero-content, .subhero-content');
         if (content) {
           content.style.transform = `translateY(${Math.min(y * 0.10, 60)}px)`;
@@ -204,16 +195,201 @@ function initScrollProgress(bar) {
 
   update();
 }
+
 function cerrarAviso() {
-      const overlay = document.getElementById('aviso-overlay');
-      overlay.classList.add('cerrando');
-      setTimeout(() => overlay.remove(), 320);
-    }
+  const overlay = document.getElementById('aviso-overlay');
+  if (!overlay) return;
+  overlay.classList.add('cerrando');
+  setTimeout(() => { overlay.style.display = 'none'; }, 320);
+}
 
-    document.getElementById('aviso-overlay').addEventListener('click', function(e) {
-      if (e.target === this) cerrarAviso();
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('aviso-overlay');
+  if (!overlay) return;
+
+  overlay.addEventListener('click', function (e) {
+    if (e.target === this) cerrarAviso();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') cerrarAviso();
+  });
+});
+
+
+function _posicionarSubmenuMas() {
+  const li = document.getElementById('nav-mas');
+  if (!li) return;
+  const submenu = li.querySelector('.submenu-mas');
+  if (!submenu) return;
+
+  const rect = li.getBoundingClientRect();
+  const viewportH = window.innerHeight;
+  const margin = 16;
+
+  const prevVis = submenu.style.visibility;
+  const prevOpa = submenu.style.opacity;
+  const prevDis = submenu.style.display;
+  submenu.style.visibility = 'hidden';
+  submenu.style.opacity = '0';
+  submenu.style.display = 'flex';
+  const subH = submenu.offsetHeight;
+  submenu.style.visibility = prevVis;
+  submenu.style.opacity = prevOpa;
+  submenu.style.display = prevDis;
+
+  let top = rect.top;
+
+  if (top + subH + margin > viewportH) {
+    top = viewportH - subH - margin;
+  }
+  if (top < margin) top = margin;
+
+  submenu.style.top  = top + 'px';
+  submenu.style.left = (rect.right + 12) + 'px';
+
+  const centroBoton = rect.top + rect.height / 2;
+  const arrowTop = Math.max(8, Math.min(subH - 20, centroBoton - top - 6));
+  submenu.style.setProperty('--arrow-top', arrowTop + 'px');
+}
+
+function toggleMasMenu(elemento, ev) {
+  if (ev) ev.preventDefault();
+  const li = document.getElementById('nav-mas');
+  if (!li) return;
+  li.classList.toggle('open');
+  if (li.classList.contains('open')) _posicionarSubmenuMas();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const li = document.getElementById('nav-mas');
+  if (!li) return;
+
+  li.addEventListener('mouseenter', _posicionarSubmenuMas);
+
+  window.addEventListener('resize', _posicionarSubmenuMas);
+  window.addEventListener('scroll', _posicionarSubmenuMas, { passive: true });
+
+  document.addEventListener('click', (e) => {
+    if (!li.contains(e.target)) li.classList.remove('open');
+  });
+});
+
+const ZOOM_MIN = 1;
+const ZOOM_MAX = 4;
+const ZOOM_STEP_DEFAULT = 0.2;
+
+let _zoomState = {
+  scale: 1,
+  tx: 0,
+  ty: 0,
+  dragging: false,
+  startX: 0,
+  startY: 0,
+  startTx: 0,
+  startTy: 0
+};
+
+function _getZoomImg() {
+  return document.getElementById('mapa-zoom-img');
+}
+
+function _getZoomViewport() {
+  return document.getElementById('mapa-zoom-viewport');
+}
+
+function _aplicarTransformZoom() {
+  const img = _getZoomImg();
+  const nivel = document.getElementById('zoom-nivel');
+  if (!img) return;
+  img.style.transform =
+    `translate(${_zoomState.tx}px, ${_zoomState.ty}px) scale(${_zoomState.scale})`;
+  if (nivel) nivel.textContent = Math.round(_zoomState.scale * 100) + '%';
+}
+
+function ajustarZoom(delta) {
+  const nuevo = Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, _zoomState.scale + delta));
+  if (nuevo === 1) { _zoomState.tx = 0; _zoomState.ty = 0; }
+  _zoomState.scale = nuevo;
+  _aplicarTransformZoom();
+}
+
+function resetZoom() {
+  _zoomState = { ...(_zoomState), scale: 1, tx: 0, ty: 0,
+                 dragging:false, startX:0, startY:0, startTx:0, startTy:0 };
+  _aplicarTransformZoom();
+}
+
+(function initZoomPan() {
+  document.addEventListener('DOMContentLoaded', () => {
+    const vp = _getZoomViewport();
+    if (!vp) return;
+
+    vp.addEventListener('mousedown', (e) => {
+      if (_zoomState.scale <= 1) return;
+      _zoomState.dragging = true;
+      _zoomState.startX = e.clientX;
+      _zoomState.startY = e.clientY;
+      _zoomState.startTx = _zoomState.tx;
+      _zoomState.startTy = _zoomState.ty;
+      vp.classList.add('is-dragging');
+      e.preventDefault();
     });
 
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') cerrarAviso();
+    window.addEventListener('mouseup', () => {
+      _zoomState.dragging = false;
+      const vp2 = _getZoomViewport();
+      vp2 && vp2.classList.remove('is-dragging');
     });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!_zoomState.dragging) return;
+      _zoomState.tx = _zoomState.startTx + (e.clientX - _zoomState.startX);
+      _zoomState.ty = _zoomState.startTy + (e.clientY - _zoomState.startY);
+      _aplicarTransformZoom();
+    });
+
+    vp.addEventListener('wheel', (e) => {
+      if (!e.ctrlKey && !e.metaKey) return;
+      e.preventDefault();
+      ajustarZoom(e.deltaY < 0 ? ZOOM_STEP_DEFAULT : -ZOOM_STEP_DEFAULT);
+    }, { passive: false });
+
+    vp.addEventListener('dblclick', () => {
+      _zoomState.scale = _zoomState.scale > 1 ? 1 : 2;
+      _zoomState.tx = 0; _zoomState.ty = 0;
+      _aplicarTransformZoom();
+    });
+  });
+})();
+
+function abrirZoomFull() {
+  const img = _getZoomImg();
+  if (!img) return;
+
+  let modal = document.getElementById('zoom-fullscreen-modal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'zoom-fullscreen-modal';
+    modal.className = 'zoom-fullscreen';
+    modal.innerHTML = `
+      <button class="zoom-fullscreen-close" type="button" aria-label="Cerrar">
+        <i class="fas fa-xmark"></i>
+      </button>
+      <img alt="Mapa ampliado">
+    `;
+    document.body.appendChild(modal);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal || e.target.closest('.zoom-fullscreen-close')) {
+        modal.classList.remove('activo');
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') modal.classList.remove('activo');
+    });
+  }
+
+  const fullImg = modal.querySelector('img');
+  fullImg.src = img.src;
+  modal.classList.add('activo');
+}
