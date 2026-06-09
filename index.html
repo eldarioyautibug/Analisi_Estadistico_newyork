@@ -196,7 +196,7 @@
           <div class="franja-mapa"></div>
           <div class="mapa-imagen" id="mapa-zoom-wrap">
             <div class="mapa-zoom-viewport" id="mapa-zoom-viewport">
-              <img src="img/WhatsApp Image 2026-05-26 at 4.22.06 AM.jpeg" alt="Mapa de ubicación" id="mapa-zoom-img">
+              <img src="img/hhhhhhh.jpeg" alt="Mapa de ubicación" id="mapa-zoom-img">
             </div>
 
             <div class="zoom-controls" id="zoom-controls">
@@ -226,10 +226,9 @@
               <span class="objetivo-kicker">02 · Dirección</span>
               <h3>Objetivo general</h3>
               <p>
-                Analizar la información histórica de los pozos regulados de petróleo, gas y otros tipos
-                en el estado de Nueva York desde 1860, con el fin de identificar su distribución,
-                evolución temporal y características principales mediante herramientas estadísticas
-                y de visualización de datos.
+                Aplicar la estadística para examinar los pozos regulados de petróleo, 
+                gas y otros tipos en el estado de Nueva York desde 1860, mediante herramientas computacionales, 
+                con el fin de identificar su distribución, evolución temporal y características principales.
               </p>
             </article>
 
@@ -237,9 +236,9 @@
               <span class="objetivo-kicker">03 · Desarrollo</span>
               <h3>Objetivos específicos</h3>
               <ul class="lista-objetivos">
-                <li>Conocer la situación actual de los pozos petroleros, de gas y otros pozos regulados registrados desde 1860, a través de sus características más importantes y medidas estadísticas, como tipo de pozo, ubicación, estado operativo y distribución temporal.</li>
-                <li>Emplear un modelo de probabilidad para establecer conclusiones sobre la población total de pozos regulados a partir de una muestra de datos del conjunto "Oil, Gas, & Other Regulated Wells: Beginning 1860".</li>
-                <li>Deducir relaciones entre variables del dataset, como la relación entre el tipo de pozo, el año de perforación, la producción o el estado del pozo, con el fin de realizar estimaciones y análisis de tendencias a lo largo del tiempo.</li>
+                <li>onocer la situación de los pozos regulados de petróleo, gas y otros tipos en el estado de Nueva York a través de sus características más importantes y medidas estadísticas.</li>
+                <li>Emplear un modelo de probabilidad para establecer conclusiones sobre los pozos regulados en el estado de Nueva York a partir de los resultados obtenidos de una muestra del conjunto de datos.</li>
+                <li>Deducir relaciones entre variables de los pozos regulados en el estado de Nueva York con el fin de realizar estimaciones y analizar tendencias a lo largo del tiempo.</li>
               </ul>
             </article>
           </div>
@@ -290,40 +289,53 @@
         </div>
 
         <div class="conceptos-grid conceptos-grid-3">
-          <div class="tarjeta-concepto tarjeta-simbolica">
-            <div class="icono-tarjeta"><i class="fas fa-globe-americas"></i></div>
-            <h3>Población</h3>
-            <p>Conjunto de todos los pozos de petróleo, gas y otros tipos registrados en el estado de Nueva York.</p>
-  
-            <div class="bloque-simbolico">
-              <span class="titulo-simbolico">Simbólico</span>
-              <code>U = {x | x ∈ Pozos registrados en el estado de Nueva York}</code>
-            </div>
-          </div>
+  <div class="tarjeta-concepto tarjeta-simbolica">
+    <div class="icono-tarjeta"><i class="fas fa-globe-americas"></i></div>
+    <h3>Población</h3>
+    <p>Todos los pozos regulados de petróleo, gas y otros tipos registrados en la base de datos desde 1860.</p>
 
-          <div class="tarjeta-concepto tarjeta-simbolica">
-            <div class="icono-tarjeta"><i class="fas fa-user"></i></div>
-            <h3>Individuo</h3>
-            <p>Cada pozo del estado de Nueva York identificado por su número API único.</p>
-            
-            <div class="bloque-simbolico">
-              <span class="titulo-simbolico">Simbólico</span>
-              <code>Xi ∈ U donde i ∈ N</code>
-              <code>Xi ∈ {pozos | poseen un número API único}</code>
-            </div>
-          </div>
+    <div class="bloque-simbolico">
+      <span class="titulo-simbolico">Simbólico</span>
+      <code>N = 34 469 pozos</code>
+      <span style="text-align:center; display:block; font-style:italic; margin: 4px 0;">o</span>
+      <code>P = &#123;x&#8321;, x&#8322;, x&#8323;, &hellip;, x&#8323;&#8324;&#8324;&#8326;&#8329;&#125;</code>
+      <span style="font-size: 0.82em; opacity: 0.8; display:block; margin-top: 6px;">
+        donde x<sub>i</sub> representa cada pozo registrado.
+      </span>
+    </div>
+  </div>
 
-          <div class="tarjeta-concepto tarjeta-simbolica">
-            <div class="icono-tarjeta"><i class="fas fa-vial"></i></div>
-            <h3>Muestra</h3>
-            <p>Un subconjunto representativo de pozos de petróleo, gas y otros tipos en el estado de Nueva York seleccionados para el estudio.</p>
-            
-            <div class="bloque-simbolico">
-              <span class="titulo-simbolico">Simbólico</span>
-              <code>M ⊂ U </code>
-              <code>M={x ∈ U | x fue seleccionado para el estudio}</code>
-            </div>
-          </div>
+  <div class="tarjeta-concepto tarjeta-simbolica">
+    <div class="icono-tarjeta"><i class="fas fa-filter"></i></div>
+    <h3>Muestra</h3>
+    <p>Conjunto de pozos utilizados para el análisis estadístico. En este caso coincide con todos los registros disponibles del dataset.</p>
+
+    <div class="bloque-simbolico">
+      <span class="titulo-simbolico">Simbólico</span>
+      <code>n = 34 469</code>
+      <span style="text-align:center; display:block; font-style:italic; margin: 4px 0;">o</span>
+      <code>M = &#123;x&#8321;, x&#8322;, x&#8323;, &hellip;, x&#8323;&#8324;&#8324;&#8326;&#8329;&#125;</code>
+    </div>
+  </div>
+
+  <div class="tarjeta-concepto tarjeta-simbolica">
+    <div class="icono-tarjeta"><i class="fas fa-clipboard-list"></i></div>
+    <h3>Caso de estudio</h3>
+    <p>
+      <strong>Textual:</strong> Análisis estadístico de los pozos regulados de petróleo, gas y otros tipos,
+      considerando sus características técnicas, geográficas y temporales.
+    </p>
+
+    <div class="bloque-simbolico">
+      <span class="titulo-simbolico">Simbólico</span>
+      <code>CE = f(Tipo de pozo, Estado, Profundidad, Ubicación, Fechas)</code>
+      <span style="font-size: 0.82em; opacity: 0.8; display:block; margin: 4px 0;">
+        o de forma más simple:
+      </span>
+      <code>CE = Análisis de los pozos regulados</code>
+    </div>
+  </div>
+</div>
 
           
         </div>
