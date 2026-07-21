@@ -72,7 +72,7 @@ function autoMarkReveals() {
   document.querySelectorAll('.section-head, .bloque-principal, .bloque-secundario, .mapa-texto, .mapa-imagen-wrap, .pie-pagina .col-footer')
     .forEach(el => el.classList.add('reveal'));
 
-  document.querySelectorAll('.conceptos-grid, .rpubs-grid, .objetivos-grid')
+  document.querySelectorAll('.conceptos-grid, .rpubs-grid, .objetivos-grid, .regresion-grid')
     .forEach(el => el.classList.add('reveal-stagger'));
 
   document.querySelectorAll('.tabla-contenedor')
@@ -118,7 +118,7 @@ function rescanReveals() {
 function initCardTilt() {
   if (window.matchMedia('(pointer: coarse)').matches) return;
 
-  const cards = document.querySelectorAll('.tarjeta-concepto, .rpub-card, .bloque-secundario');
+  const cards = document.querySelectorAll('.tarjeta-concepto, .rpub-card, .regresion-card, .bloque-secundario');
   const MAX = 6;
 
   cards.forEach(card => {
