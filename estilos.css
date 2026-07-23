@@ -2847,11 +2847,14 @@ body{
     grid-column: span 3;
 }
 
+/* ==========================================================
+   DISEÑO ESPECIAL DE TARJETAS DE REGRESIÓN
+   ========================================================== */
 .regresion-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 28px;
-  margin-top: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 26px;
+  margin-top: 24px;
 }
 
 .regresion-card {
