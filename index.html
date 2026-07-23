@@ -1521,6 +1521,74 @@
         </div>
       </section>
 
+      <section class="objetivos-editorial section-box">
+        <div class="objetivos-wrap">
+          <article class="bloque-principal" style="margin-bottom: 2.5rem;">
+            <span class="objetivo-kicker">01 · Planteamiento</span>
+            <h2>Planteamiento del problema</h2>
+            <p>
+              En la industria petrolera, la perforación de pozos requiere estimar la profundidad con precisión para optimizar las operaciones. Sin embargo, los métodos convencionales enfrentan desafíos al analizar grandes volúmenes de datos históricos debido a su alta no linealidad y al desbalance de registros.
+            </p>
+            <p>
+              Para resolver estas incertidumbres técnicas, el Machine Learning permite procesar variables clave —como latitud, longitud, elevación y año de terminación— para predecir la profundidad de los pozos.
+            </p>
+            <p>
+              Mediante el uso de redes neuronales profundas y perceptrones multicapa, este enfoque busca optimizar la planificación técnica y mejorar la precisión en la estimación de profundidades.
+            </p>
+          </article>
+          
+          <article class="bloque-principal" style="margin-bottom: 2.5rem;">
+            <span class="objetivo-kicker">02 · Propósito</span>
+            <h2>Objetivos</h2>
+            <p>
+              Desarrollar e implementar modelos de redes neuronales profundas (tanto de clasificación como de regresión) basados en variables de entrada como la latitud, la longitud, la elevación y el año de terminación, para predecir y clasificar de forma precisa la profundidad vertical real (True Vertical Depth) en pozos petroleros.
+            </p>
+          </article>
+
+          <article class="bloque-principal">
+            <span class="objetivo-kicker">03 · Resultados</span>
+            <h2>Conclusiones</h2>
+            <p>
+              El uso de redes neuronales profundas permitió procesar datos históricos masivos de pozos y capturar relaciones no lineales complejas. Asimismo, se logró resolver el desbalance de clases de forma efectiva, mientras que las estrategias de regularización aseguraron un alto nivel de generalización sin sobreajuste, permitiendo finalmente integrar herramientas interactivas para consultas en tiempo real y optimizar la toma de decisiones técnicas.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-box" style="padding-top: 0;">
+        <div class="section-head">
+          <span class="section-tag">Prompting</span>
+          <h2>Prompt REDES NEURONALES</h2>
+          <p>Instrucción diseñada para generar un modelo avanzado de Machine Learning y su respectiva interfaz interactiva.</p>
+        </div>
+        <div style="background: rgba(0, 0, 0, 0.4); padding: 30px; border-radius: 12px; border-left: 5px solid #00f2fe; margin: 0 auto; max-width: 900px; font-family: monospace; color: #e0e0e0; line-height: 1.8; font-size: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); overflow-x: auto;">
+          <div style="color: #66d9ef; margin-bottom: 15px; font-weight: bold; font-size: 16px;">&gt; Actúa como un experto senior en Machine Learning e Ingeniería de Petróleos. Necesito que desarrolles un script completo en Python (utilizando librerías como Pandas, Scikit-Learn y TensorFlow/Keras) para construir un modelo de Red Neuronal Artificial (ANN).</div>
+          <div style="color: #a6e22e; margin-bottom: 10px;">&gt; El script debe contemplar dos enfoques basados en el dataset histórico:</div>
+          <ul style="list-style-type: none; padding-left: 20px; margin-bottom: 20px; color: #e6db74;">
+            <li>1. <strong style="color:#fd971f;">Modelo de Clasificación:</strong> Para agrupar y clasificar la profundidad del pozo en categorías (BAJA, MEDIA, ALTA).</li>
+            <li>2. <strong style="color:#fd971f;">Modelo de Regresión:</strong> Para predecir el valor continuo de la profundidad.</li>
+          </ul>
+          <div style="color: #a6e22e; margin-bottom: 10px;">&gt; Utiliza estrictamente las siguientes variables específicas del dataset:</div>
+          <ul style="list-style-type: none; padding-left: 20px; margin-bottom: 20px; color: #e6db74;">
+            <li style="margin-bottom: 8px;">&bull; <strong style="color:#fd971f;">Variables de Entrada / Predictoras (X):</strong> Surface Latitude (Latitud de superficie), Surface Longitude (Longitud de superficie), Elevation, ft (Elevación en pies sobre el nivel del mar) y Completion Year (Año de terminación u operación).</li>
+            <li>&bull; <strong style="color:#fd971f;">Variable de Salida / Objetivo (Y):</strong> True Vertical Depth, ft (Profundidad Vertical Real en pies / TVD).</li>
+          </ul>
+          <div style="color: #a6e22e; margin-bottom: 10px;">&gt; Organiza estrictamente el código por secciones utilizando comentarios claros de Markdown o separadores en el siguiente orden lógico:</div>
+          <ul style="list-style-type: none; padding-left: 20px; margin-bottom: 0; color: #f92672;">
+            <li>1. Librerías</li>
+            <li>2. Carga de Dataset</li>
+            <li>3. Procesamiento y Limpieza de datos</li>
+            <li>4. División de Datos</li>
+            <li>5. Modelo</li>
+            <li>6. Entrenamiento</li>
+            <li>7. Evaluación</li>
+            <li>8. Gráficas del Modelo</li>
+            <li>9. Predicción</li>
+            <li>10. Interfaz Gráfica / Aplicación (Creación de una aplicación interactiva web simple en Python utilizando Streamlit o Gradio basada en el modelo entrenado para ingresar las 4 variables de entrada y visualizar la profundidad estimada de forma visual).</li>
+          </ul>
+        </div>
+      </section>
+
       <section class="section-box">
         <div class="section-head">
           <span class="section-tag">Modelos Inteligentes</span>
