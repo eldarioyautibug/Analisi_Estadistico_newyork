@@ -1559,44 +1559,6 @@
         </div>
       </section>
 
-      <section class="objetivos-editorial section-box" style="padding-top: 0;">
-        <div class="section-head center" style="margin-bottom: 40px; text-align: center;">
-          <span class="section-tag">Modelo de Ensamble</span>
-          <h2>Random Forest</h2>
-        </div>
-        <div class="objetivos-wrap">
-          <article class="bloque-principal" style="margin-bottom: 2.5rem;">
-            <span class="objetivo-kicker">01 · Planteamiento</span>
-            <h2>Planteamiento del Problema</h2>
-            <p>
-              En la industria petrolera, la perforación de pozos requiere estimar la profundidad con precisión para optimizar las operaciones. Sin embargo, los métodos convencionales enfrentan desafíos al analizar grandes volúmenes de datos históricos debido a su alta no linealidad y complejidad estructural.
-            </p>
-            <p>
-              Para resolver estas incertidumbres técnicas, el uso de Machine Learning —específicamente algoritmos basados en árboles de decisión— permite procesar múltiples variables geológicas, geográficas y operativas clave para predecir de forma confiable la profundidad de los pozos.
-            </p>
-            <p>
-              Mediante la implementación de un modelo de Random Forest, este enfoque busca optimizar la planificación técnica y mejorar la precisión en la estimación de profundidades.
-            </p>
-          </article>
-          
-          <article class="bloque-principal" style="margin-bottom: 2.5rem;">
-            <span class="objetivo-kicker">02 · Propósito</span>
-            <h2>Objetivo</h2>
-            <p>
-              Desarrollar e implementar un modelo de aprendizaje supervisado mediante el algoritmo Random Forest, utilizando variables geológicas y operativas, para predecir con alta precisión la profundidad vertical real (True Vertical Depth) en pozos petroleros.
-            </p>
-          </article>
-
-          <article class="bloque-principal">
-            <span class="objetivo-kicker">03 · Resultados</span>
-            <h2>Conclusiones</h2>
-            <p>
-              El uso del modelo Random Forest permitió procesar datos históricos masivos de pozos y capturar relaciones no lineales complejas entre las variables geológicas y operativas. Asimismo, se logró un alto nivel de ajuste predictivo sin sobreajuste, validado mediante métricas de desempeño robustas, permitiendo identificar las variables de mayor impacto en la estimación para optimizar la toma de decisiones técnicas en la industria petrolera.
-            </p>
-          </article>
-        </div>
-      </section>
-
       <section class="section-box" style="padding-top: 0;">
         <div class="section-head">
           <span class="section-tag">Prompting</span>
@@ -1631,100 +1593,125 @@
         </div>
       </section>
 
-      <section class="section-box methodology-section">
-        <div class="section-head center" style="text-align: center; margin-bottom: 40px;">
-          <h2 style="font-size: 2.5rem; letter-spacing: 0.1em;">METODOLOGÍA</h2>
-          <div style="width: 150px; height: 3px; background: linear-gradient(90deg, #F39F5A, #AE445A); margin: 15px auto 0;"></div>
+      <section class="section-box" style="padding: 60px 40px;">
+        <div style="text-align: center; margin-bottom: 50px;">
+          <h2 style="font-size: 2.4rem; font-weight: 900; letter-spacing: 0.12em; color: #f7f8fa; text-transform: uppercase;">METODOLOGÍA</h2>
+          <div style="width: 130px; height: 3px; background: linear-gradient(90deg, #F39F5A, #AE445A); margin: 14px auto 0; border-radius: 2px;"></div>
         </div>
 
-        <div class="metodologia-wrapper">
-          <div class="metodologia-container">
-            <div class="metodologia-step reveal">
-              <div class="metodologia-icon"><i class="fas fa-book-open"></i></div>
-              <div class="metodologia-number">01</div>
-              <div class="metodologia-title">CARGAR<br>LIBRERÍAS</div>
-              <div class="metodologia-line"></div>
-            </div>
-            <i class="fas fa-arrow-right met-arrow reveal"></i>
+        <!-- FILA 1: pasos 01-05 -->
+        <div style="display: flex; align-items: center; justify-content: center; flex-wrap: nowrap; gap: 8px; margin-bottom: 0;">
 
-            <div class="metodologia-step reveal">
-              <div class="metodologia-icon"><i class="fas fa-database"></i></div>
-              <div class="metodologia-number">02</div>
-              <div class="metodologia-title">CARGAR<br>DATA SET</div>
-              <div class="metodologia-line"></div>
-            </div>
-            <i class="fas fa-arrow-right met-arrow reveal"></i>
-
-            <div class="metodologia-step reveal">
-              <div class="metodologia-icon"><i class="fas fa-cog"></i></div>
-              <div class="metodologia-number">03</div>
-              <div class="metodologia-title">PROCESAMIENTO<br>DE DATOS</div>
-              <div class="metodologia-line"></div>
-            </div>
-            <i class="fas fa-arrow-right met-arrow reveal"></i>
-
-            <div class="metodologia-step reveal">
-              <div class="metodologia-icon"><i class="fas fa-chart-pie"></i></div>
-              <div class="metodologia-number">04</div>
-              <div class="metodologia-title">DIVISIÓN<br>DE DATOS</div>
-              <div class="metodologia-line"></div>
-            </div>
-            <i class="fas fa-arrow-right met-arrow reveal"></i>
-
-            <div class="metodologia-step reveal">
-              <div class="metodologia-icon"><i class="fas fa-cube"></i></div>
-              <div class="metodologia-number">05</div>
-              <div class="metodologia-title">MODELO</div>
-              <div class="metodologia-line"></div>
-            </div>
-
-            <div class="met-break reveal">
-              <div class="met-break-path">
-                <i class="fas fa-arrow-down met-break-arrow"></i>
-              </div>
-            </div>
-
-            <div class="metodologia-step reveal">
-              <div class="metodologia-icon"><i class="fas fa-brain"></i></div>
-              <div class="metodologia-number">06</div>
-              <div class="metodologia-title">ENTRENAMIENTO</div>
-              <div class="metodologia-line"></div>
-            </div>
-            <i class="fas fa-arrow-right met-arrow reveal"></i>
-
-            <div class="metodologia-step reveal">
-              <div class="metodologia-icon"><i class="fas fa-chart-line"></i></div>
-              <div class="metodologia-number">07</div>
-              <div class="metodologia-title">PREDICCIONES</div>
-              <div class="metodologia-line"></div>
-            </div>
-            <i class="fas fa-arrow-right met-arrow reveal"></i>
-
-            <div class="metodologia-step reveal">
-              <div class="metodologia-icon"><i class="fas fa-clipboard-check"></i></div>
-              <div class="metodologia-number">08</div>
-              <div class="metodologia-title">EVALUACIÓN</div>
-              <div class="metodologia-line"></div>
-            </div>
-            <i class="fas fa-arrow-right met-arrow reveal"></i>
-
-            <div class="metodologia-step reveal">
-              <div class="metodologia-icon"><i class="fas fa-chart-bar"></i></div>
-              <div class="metodologia-number">09</div>
-              <div class="metodologia-title">VISUALIZACIÓN DE<br>RESULTADOS</div>
-              <div class="metodologia-line"></div>
-            </div>
-            <i class="fas fa-arrow-right met-arrow reveal"></i>
-
-            <div class="metodologia-step reveal">
-              <div class="metodologia-icon"><i class="fas fa-bullseye"></i></div>
-              <div class="metodologia-number">10</div>
-              <div class="metodologia-title">CONCLUSIÓN</div>
-              <div class="metodologia-line"></div>
-            </div>
+          <!-- Paso 01 -->
+          <div style="background:#0B1120; border:1px solid #1e293b; border-radius:14px; padding:22px 14px 18px; width:130px; min-width:110px; text-align:center; display:flex; flex-direction:column; align-items:center; box-shadow:0 6px 20px rgba(0,0,0,0.4);">
+            <div style="width:46px;height:46px;border-radius:50%;border:1.5px solid #F39F5A;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#F39F5A;margin-bottom:10px;"><i class="fas fa-book-open"></i></div>
+            <div style="font-size:1.9rem;font-weight:800;color:#F39F5A;line-height:1;">01</div>
+            <div style="font-size:0.68rem;font-weight:700;color:#f7f8fa;text-transform:uppercase;letter-spacing:0.05em;margin:8px 0 10px;line-height:1.35;">CARGAR<br>LIBRERÍAS</div>
+            <div style="width:26px;height:3px;background:linear-gradient(90deg,#F39F5A,#AE445A);border-radius:2px;"></div>
           </div>
+
+          <i class="fas fa-arrow-right" style="color:#f7f8fa;font-size:1rem;opacity:0.7;flex-shrink:0;"></i>
+
+          <!-- Paso 02 -->
+          <div style="background:#0B1120; border:1px solid #1e293b; border-radius:14px; padding:22px 14px 18px; width:130px; min-width:110px; text-align:center; display:flex; flex-direction:column; align-items:center; box-shadow:0 6px 20px rgba(0,0,0,0.4);">
+            <div style="width:46px;height:46px;border-radius:50%;border:1.5px solid #F39F5A;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#F39F5A;margin-bottom:10px;"><i class="fas fa-database"></i></div>
+            <div style="font-size:1.9rem;font-weight:800;color:#F39F5A;line-height:1;">02</div>
+            <div style="font-size:0.68rem;font-weight:700;color:#f7f8fa;text-transform:uppercase;letter-spacing:0.05em;margin:8px 0 10px;line-height:1.35;">CARGAR<br>DATA SET</div>
+            <div style="width:26px;height:3px;background:linear-gradient(90deg,#F39F5A,#AE445A);border-radius:2px;"></div>
+          </div>
+
+          <i class="fas fa-arrow-right" style="color:#f7f8fa;font-size:1rem;opacity:0.7;flex-shrink:0;"></i>
+
+          <!-- Paso 03 -->
+          <div style="background:#0B1120; border:1px solid #1e293b; border-radius:14px; padding:22px 14px 18px; width:130px; min-width:110px; text-align:center; display:flex; flex-direction:column; align-items:center; box-shadow:0 6px 20px rgba(0,0,0,0.4);">
+            <div style="width:46px;height:46px;border-radius:50%;border:1.5px solid #F39F5A;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#F39F5A;margin-bottom:10px;"><i class="fas fa-cog"></i></div>
+            <div style="font-size:1.9rem;font-weight:800;color:#F39F5A;line-height:1;">03</div>
+            <div style="font-size:0.68rem;font-weight:700;color:#f7f8fa;text-transform:uppercase;letter-spacing:0.05em;margin:8px 0 10px;line-height:1.35;">PROCESAMIENTO<br>DE DATOS</div>
+            <div style="width:26px;height:3px;background:linear-gradient(90deg,#F39F5A,#AE445A);border-radius:2px;"></div>
+          </div>
+
+          <i class="fas fa-arrow-right" style="color:#f7f8fa;font-size:1rem;opacity:0.7;flex-shrink:0;"></i>
+
+          <!-- Paso 04 -->
+          <div style="background:#0B1120; border:1px solid #1e293b; border-radius:14px; padding:22px 14px 18px; width:130px; min-width:110px; text-align:center; display:flex; flex-direction:column; align-items:center; box-shadow:0 6px 20px rgba(0,0,0,0.4);">
+            <div style="width:46px;height:46px;border-radius:50%;border:1.5px solid #F39F5A;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#F39F5A;margin-bottom:10px;"><i class="fas fa-chart-pie"></i></div>
+            <div style="font-size:1.9rem;font-weight:800;color:#F39F5A;line-height:1;">04</div>
+            <div style="font-size:0.68rem;font-weight:700;color:#f7f8fa;text-transform:uppercase;letter-spacing:0.05em;margin:8px 0 10px;line-height:1.35;">DIVISIÓN<br>DE DATOS</div>
+            <div style="width:26px;height:3px;background:linear-gradient(90deg,#F39F5A,#AE445A);border-radius:2px;"></div>
+          </div>
+
+          <i class="fas fa-arrow-right" style="color:#f7f8fa;font-size:1rem;opacity:0.7;flex-shrink:0;"></i>
+
+          <!-- Paso 05 -->
+          <div style="background:#0B1120; border:1px solid #1e293b; border-radius:14px; padding:22px 14px 18px; width:130px; min-width:110px; text-align:center; display:flex; flex-direction:column; align-items:center; box-shadow:0 6px 20px rgba(0,0,0,0.4);">
+            <div style="width:46px;height:46px;border-radius:50%;border:1.5px solid #F39F5A;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#F39F5A;margin-bottom:10px;"><i class="fas fa-cube"></i></div>
+            <div style="font-size:1.9rem;font-weight:800;color:#F39F5A;line-height:1;">05</div>
+            <div style="font-size:0.68rem;font-weight:700;color:#f7f8fa;text-transform:uppercase;letter-spacing:0.05em;margin:8px 0 10px;line-height:1.35;">MODELO</div>
+            <div style="width:26px;height:3px;background:linear-gradient(90deg,#F39F5A,#AE445A);border-radius:2px;"></div>
+          </div>
+
+        </div>
+
+        <!-- Conector entre filas -->
+        <div style="display:flex; justify-content:flex-end; padding-right: calc(50% - 340px); margin: 4px 0;">
+          <i class="fas fa-arrow-down" style="color:#f7f8fa;font-size:1rem;opacity:0.7;"></i>
+        </div>
+
+        <!-- FILA 2: pasos 06-10 (invertido visualmente para dar efecto de serpentina) -->
+        <div style="display: flex; align-items: center; justify-content: center; flex-wrap: nowrap; gap: 8px; flex-direction: row-reverse;">
+
+          <!-- Paso 06 -->
+          <div style="background:#0B1120; border:1px solid #1e293b; border-radius:14px; padding:22px 14px 18px; width:130px; min-width:110px; text-align:center; display:flex; flex-direction:column; align-items:center; box-shadow:0 6px 20px rgba(0,0,0,0.4);">
+            <div style="width:46px;height:46px;border-radius:50%;border:1.5px solid #F39F5A;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#F39F5A;margin-bottom:10px;"><i class="fas fa-brain"></i></div>
+            <div style="font-size:1.9rem;font-weight:800;color:#F39F5A;line-height:1;">06</div>
+            <div style="font-size:0.68rem;font-weight:700;color:#f7f8fa;text-transform:uppercase;letter-spacing:0.05em;margin:8px 0 10px;line-height:1.35;">ENTRENAMIENTO</div>
+            <div style="width:26px;height:3px;background:linear-gradient(90deg,#F39F5A,#AE445A);border-radius:2px;"></div>
+          </div>
+
+          <i class="fas fa-arrow-right" style="color:#f7f8fa;font-size:1rem;opacity:0.7;flex-shrink:0;transform:rotate(180deg);"></i>
+
+          <!-- Paso 07 -->
+          <div style="background:#0B1120; border:1px solid #1e293b; border-radius:14px; padding:22px 14px 18px; width:130px; min-width:110px; text-align:center; display:flex; flex-direction:column; align-items:center; box-shadow:0 6px 20px rgba(0,0,0,0.4);">
+            <div style="width:46px;height:46px;border-radius:50%;border:1.5px solid #F39F5A;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#F39F5A;margin-bottom:10px;"><i class="fas fa-chart-line"></i></div>
+            <div style="font-size:1.9rem;font-weight:800;color:#F39F5A;line-height:1;">07</div>
+            <div style="font-size:0.68rem;font-weight:700;color:#f7f8fa;text-transform:uppercase;letter-spacing:0.05em;margin:8px 0 10px;line-height:1.35;">PREDICCIONES</div>
+            <div style="width:26px;height:3px;background:linear-gradient(90deg,#F39F5A,#AE445A);border-radius:2px;"></div>
+          </div>
+
+          <i class="fas fa-arrow-right" style="color:#f7f8fa;font-size:1rem;opacity:0.7;flex-shrink:0;transform:rotate(180deg);"></i>
+
+          <!-- Paso 08 -->
+          <div style="background:#0B1120; border:1px solid #1e293b; border-radius:14px; padding:22px 14px 18px; width:130px; min-width:110px; text-align:center; display:flex; flex-direction:column; align-items:center; box-shadow:0 6px 20px rgba(0,0,0,0.4);">
+            <div style="width:46px;height:46px;border-radius:50%;border:1.5px solid #F39F5A;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#F39F5A;margin-bottom:10px;"><i class="fas fa-clipboard-check"></i></div>
+            <div style="font-size:1.9rem;font-weight:800;color:#F39F5A;line-height:1;">08</div>
+            <div style="font-size:0.68rem;font-weight:700;color:#f7f8fa;text-transform:uppercase;letter-spacing:0.05em;margin:8px 0 10px;line-height:1.35;">EVALUACIÓN</div>
+            <div style="width:26px;height:3px;background:linear-gradient(90deg,#F39F5A,#AE445A);border-radius:2px;"></div>
+          </div>
+
+          <i class="fas fa-arrow-right" style="color:#f7f8fa;font-size:1rem;opacity:0.7;flex-shrink:0;transform:rotate(180deg);"></i>
+
+          <!-- Paso 09 -->
+          <div style="background:#0B1120; border:1px solid #1e293b; border-radius:14px; padding:22px 14px 18px; width:130px; min-width:110px; text-align:center; display:flex; flex-direction:column; align-items:center; box-shadow:0 6px 20px rgba(0,0,0,0.4);">
+            <div style="width:46px;height:46px;border-radius:50%;border:1.5px solid #F39F5A;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#F39F5A;margin-bottom:10px;"><i class="fas fa-chart-bar"></i></div>
+            <div style="font-size:1.9rem;font-weight:800;color:#F39F5A;line-height:1;">09</div>
+            <div style="font-size:0.68rem;font-weight:700;color:#f7f8fa;text-transform:uppercase;letter-spacing:0.05em;margin:8px 0 10px;line-height:1.35;">VISUALIZACIÓN<br>RESULTADOS</div>
+            <div style="width:26px;height:3px;background:linear-gradient(90deg,#F39F5A,#AE445A);border-radius:2px;"></div>
+          </div>
+
+          <i class="fas fa-arrow-right" style="color:#f7f8fa;font-size:1rem;opacity:0.7;flex-shrink:0;transform:rotate(180deg);"></i>
+
+          <!-- Paso 10 -->
+          <div style="background:#0B1120; border:1px solid #1e293b; border-radius:14px; padding:22px 14px 18px; width:130px; min-width:110px; text-align:center; display:flex; flex-direction:column; align-items:center; box-shadow:0 6px 20px rgba(0,0,0,0.4);">
+            <div style="width:46px;height:46px;border-radius:50%;border:1.5px solid #F39F5A;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#F39F5A;margin-bottom:10px;"><i class="fas fa-bullseye"></i></div>
+            <div style="font-size:1.9rem;font-weight:800;color:#F39F5A;line-height:1;">10</div>
+            <div style="font-size:0.68rem;font-weight:700;color:#f7f8fa;text-transform:uppercase;letter-spacing:0.05em;margin:8px 0 10px;line-height:1.35;">CONCLUSIÓN</div>
+            <div style="width:26px;height:3px;background:linear-gradient(90deg,#F39F5A,#AE445A);border-radius:2px;"></div>
+          </div>
+
         </div>
       </section>
+
+
 
       <section class="section-box">
         <div class="section-head">
@@ -1753,24 +1740,7 @@
             </a>
           </article>
 
-          <article class="regresion-card ml-card">
-            <div class="regresion-header">
-              <div class="regresion-icon-box">
-                <i class="fas fa-tree"></i>
-              </div>
-              <div class="regresion-tags-wrap">
-                <span class="tag-regresion ml">Machine Learning</span>
-                <span class="tag-regresion rpubs"><i class="fas fa-book"></i> RPubs</span>
-              </div>
-            </div>
-            <div class="regresion-body">
-              <h3>Random Forest</h3>
-              <p>Algoritmo ensamble basado en múltiples árboles de decisión para optimizar la precisión y evaluar importancia de variables.</p>
-            </div>
-            <a href="https://rpubs.com/jennycord/1446897" class="btn-regresion btn-rpubs" target="_blank" rel="noopener">
-              <i class="fas fa-chart-pie"></i> Ver reporte en RPubs
-            </a>
-          </article>
+
 
           <article class="regresion-card ml-card">
             <div class="regresion-header">
@@ -1793,6 +1763,69 @@
 
         </div>
       </section>
+
+      <hr style="border: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(243, 159, 90, 0.5), transparent); margin: 20px auto 0; max-width: 800px;">
+
+      <section class="objetivos-editorial section-box">
+        <div class="section-head center" style="margin-bottom: 40px; text-align: center;">
+          <span class="section-tag">Modelo de Ensamble</span>
+          <h2>Random Forest</h2>
+        </div>
+        <div class="objetivos-wrap">
+          <article class="bloque-principal" style="margin-bottom: 2.5rem;">
+            <span class="objetivo-kicker">01 · Planteamiento</span>
+            <h2>Planteamiento del Problema</h2>
+            <p>
+              En la industria petrolera, la perforación de pozos requiere estimar la profundidad con precisión para optimizar las operaciones. Sin embargo, los métodos convencionales enfrentan desafíos al analizar grandes volúmenes de datos históricos debido a su alta no linealidad y complejidad estructural.
+            </p>
+            <p>
+              Para resolver estas incertidumbres técnicas, el uso de Machine Learning —específicamente algoritmos basados en árboles de decisión— permite procesar múltiples variables geológicas, geográficas y operativas clave para predecir de forma confiable la profundidad de los pozos.
+            </p>
+            <p>
+              Mediante la implementación de un modelo de Random Forest, este enfoque busca optimizar la planificación técnica y mejorar la precisión en la estimación de profundidades.
+            </p>
+          </article>
+
+          <article class="bloque-principal" style="margin-bottom: 2.5rem;">
+            <span class="objetivo-kicker">02 · Propósito</span>
+            <h2>Objetivo</h2>
+            <p>
+              Desarrollar e implementar un modelo de aprendizaje supervisado mediante el algoritmo Random Forest, utilizando variables geológicas y operativas, para predecir con alta precisión la profundidad vertical real (True Vertical Depth) en pozos petroleros.
+            </p>
+          </article>
+
+          <article class="bloque-principal">
+            <span class="objetivo-kicker">03 · Resultados</span>
+            <h2>Conclusiones</h2>
+            <p>
+              El uso del modelo Random Forest permitió procesar datos históricos masivos de pozos y capturar relaciones no lineales complejas entre las variables geológicas y operativas. Asimismo, se logró un alto nivel de ajuste predictivo sin sobreajuste, validado mediante métricas de desempeño robustas, permitiendo identificar las variables de mayor impacto en la estimación para optimizar la toma de decisiones técnicas en la industria petrolera.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-box" style="padding-top: 0;">
+        <div class="regresion-grid" style="max-width: 420px; margin: 0 auto;">
+          <article class="regresion-card ml-card">
+            <div class="regresion-header">
+              <div class="regresion-icon-box">
+                <i class="fas fa-tree"></i>
+              </div>
+              <div class="regresion-tags-wrap">
+                <span class="tag-regresion ml">Machine Learning</span>
+                <span class="tag-regresion rpubs"><i class="fas fa-book"></i> RPubs</span>
+              </div>
+            </div>
+            <div class="regresion-body">
+              <h3>Random Forest</h3>
+            </div>
+            <a href="https://rpubs.com/jennycord/1446897" class="btn-regresion btn-rpubs" target="_blank" rel="noopener">
+              <i class="fas fa-chart-pie"></i> Ver reporte en RPubs
+            </a>
+          </article>
+        </div>
+      </section>
+
     </div>
 
 
