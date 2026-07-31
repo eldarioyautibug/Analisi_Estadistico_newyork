@@ -13,6 +13,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- MathJax Configuration for rendering math formulas clearly -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
@@ -1963,9 +1975,8 @@
                 <div class="rf-agg-section">
                   <div class="rf-agg-block">
                     <div class="rf-agg-type"><i class="fas fa-calculator"></i> Si es Regresión</div>
-                    <div class="rf-agg-sub">Promedio Matemático (Media)</div>
                     <div class="rf-formula-display">
-                      \(\hat{y} = \frac{1}{B} \sum_{b=1}^{B} y_b\)
+                      $$\hat{y} = \frac{1}{B} \sum_{b=1}^{B} y_b$$
                     </div>
                     <div class="rf-final-res">
                       <i class="fas fa-arrow-down" style="display:block; margin-bottom: 2px;"></i>

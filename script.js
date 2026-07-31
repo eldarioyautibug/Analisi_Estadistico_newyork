@@ -19,6 +19,9 @@ function navegar(seccion, elemento) {
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
   setTimeout(rescanReveals, 60);
+  if (window.MathJax && typeof window.MathJax.typesetPromise === 'function') {
+    window.MathJax.typesetPromise();
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {

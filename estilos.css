@@ -3082,24 +3082,13 @@ body{
 
 
 .rf-diagram-container {
-  background: linear-gradient(165deg, #090e18 0%, #0d1527 50%, #080c15 100%);
-  border: 1px solid rgba(243, 159, 90, 0.3);
-  border-radius: 20px;
-  padding: 32px 26px;
-  margin: 35px 0 45px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 10px 0 20px;
+  margin: 20px 0 35px;
+  box-shadow: none;
   position: relative;
-  overflow: hidden;
-}
-
-.rf-diagram-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #F39F5A, #a855f7, #3b82f6, #ec4899);
 }
 
 .rf-diagram-header {
@@ -3404,15 +3393,25 @@ body{
 }
 
 .rf-formula-display {
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px dashed rgba(236, 72, 153, 0.4);
-  border-radius: 8px;
-  padding: 6px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px dashed rgba(236, 72, 153, 0.45);
+  border-radius: 10px;
+  padding: 10px 8px;
   text-align: center;
-  font-family: 'Orbitron', monospace;
-  font-size: 0.88rem;
+  font-family: 'Orbitron', 'Montserrat', sans-serif;
+  font-size: 1.15rem;
   color: #f472b6;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  min-height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rf-formula-display .mjx-chtml {
+  font-size: 1.25rem !important;
+  color: #ff85c0 !important;
 }
 
 .rf-final-res {
