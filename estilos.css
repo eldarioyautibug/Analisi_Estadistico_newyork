@@ -3135,7 +3135,6 @@ body{
   margin: 0 auto;
 }
 
-/* Steps Top Bar */
 .rf-steps-bar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
