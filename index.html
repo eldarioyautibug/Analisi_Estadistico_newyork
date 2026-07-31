@@ -1606,7 +1606,6 @@
             min-height: 80px;
           }
           
-          /* Colores basados en el diagrama */
           .bg-red { background-color: #ff6b6b; }
           .bg-teal { background-color: #1dd1a1; }
           .bg-orange { background-color: #ffb142; }
@@ -1615,7 +1614,6 @@
           .bg-yellow { background-color: #feca57; }
           .bg-purple { background-color: #c5a3ff; }
 
-          /* Flechas Desktop */
           @media (min-width: 769px) {
             .step-1 { grid-column: 1; grid-row: 1; }
             .step-2 { grid-column: 2; grid-row: 1; }
@@ -1654,7 +1652,6 @@
             }
           }
 
-          /* Modo Móvil */
           @media (max-width: 768px) {
             .ml-flowchart {
               grid-template-columns: 1fr;
@@ -1984,7 +1981,6 @@
         </div>
       </section>
 
-      <!-- DIAGRAMA 2: Arquitectura Conceptual de Random Forest -->
       <section class="section-box" style="padding-top: 0; padding-bottom: 20px;">
         <div class="rf-diagram-container">
           
@@ -1994,7 +1990,6 @@
             <p>Ilustración del funcionamiento interno del algoritmo Random Forest desde la entrada de datos del subsuelo hasta la predicción final.</p>
           </div>
 
-          <!-- Pasos de cabecera -->
           <div class="rf-steps-bar">
             <div class="rf-step-title">
               <span class="rf-step-num">1</span> ENTRADA DE DATOS
@@ -2010,10 +2005,8 @@
             </div>
           </div>
 
-          <!-- 4 Columnas del Flujo -->
           <div class="rf-flow-grid">
             
-            <!-- Columna 1: Entrada de Datos -->
             <div class="rf-col rf-col-1">
               <div>
                 <div class="rf-col-head">
@@ -2040,7 +2033,6 @@
               </div>
             </div>
 
-            <!-- Columna 2: Muestreo Bootstrap -->
             <div class="rf-col rf-col-2">
               <div>
                 <div class="rf-col-head">
@@ -2087,7 +2079,6 @@
               </div>
             </div>
 
-            <!-- Columna 3: Bosque de Árboles -->
             <div class="rf-col rf-col-3">
               <div>
                 <div class="rf-col-head">
@@ -2095,14 +2086,12 @@
                   <h4>Bosque de Árboles</h4>
                 </div>
                 <div class="rf-trees-container">
-                  <!-- Árbol 1 -->
                   <div class="rf-tree-mini-card">
                     <div class="rf-tree-title">Árbol 1</div>
                     <span class="rf-tree-split">Split: Elevation</span>
                     <div class="rf-tree-diagram-icon"><i class="fas fa-sitemap"></i></div>
                     <div class="rf-tree-out">Predicción 1 (y₁)</div>
                   </div>
-                  <!-- Árbol 2 -->
                   <div class="rf-tree-mini-card">
                     <div class="rf-tree-title">Árbol 2</div>
                     <span class="rf-tree-split">Split: Well_Type</span>
@@ -2110,7 +2099,6 @@
                     <div class="rf-tree-out">Predicción 2 (y₂)</div>
                   </div>
                   <div style="text-align: center; color: #60a5fa; font-weight: bold; margin: 2px 0;">...</div>
-                  <!-- Árbol 500 -->
                   <div class="rf-tree-mini-card">
                     <div class="rf-tree-title">Árbol 500</div>
                     <span class="rf-tree-split">Split: County</span>
@@ -2129,7 +2117,6 @@
               </div>
             </div>
 
-            <!-- Columna 4: Agregación Final -->
             <div class="rf-col rf-col-4">
               <div>
                 <div class="rf-col-head">
@@ -2150,7 +2137,6 @@
                     </div>
                   </div>
 
-                  <!-- Si es Clasificación -->
                   <div class="rf-agg-block">
                     <div class="rf-agg-type"><i class="fas fa-tags"></i> Si es Clasificación</div>
                     <div class="rf-agg-sub">Votación Mayoritaria (Majority Vote)</div>
@@ -2171,7 +2157,6 @@
 
           </div>
 
-          <!-- Pie Leyenda / Notas Clave -->
           <div class="rf-legend-grid">
             <div class="rf-legend-card">
               <i class="fas fa-box-archive"></i>
@@ -2228,7 +2213,6 @@
             </a>
           </article>
 
-          <!-- Carta: Random Forest Regresión -->
           <article class="regresion-card ml-card" style="flex: 1; min-width: 280px; max-width: 400px;">
             <div class="regresion-header">
               <div class="regresion-icon-box">
